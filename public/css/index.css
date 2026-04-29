@@ -1,0 +1,496 @@
+
+ :root {
+      --navy:    #02263c ;   /* top bar & nav background */
+      --blue:    #1565C0;   /* department card */
+      --red:     #C62828;   /* minister card */
+      --saffron: #FF6F00;   /* accent / India flag color */
+      --green:   #1B5E20;   /* India flag green */
+      --white:   #ffffff;
+      --light-bg:#ffffff;
+      --text:    #1a1a1a;
+      --font-body: 'Noto Sans', sans-serif;
+      --font-nav:  'Roboto Condensed', sans-serif;
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+   
+    color: #000000;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+ 
+/* Scrolling Banner */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes blink-text {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glow-effect {
+    0%, 100% {
+        text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ff6f00, 0 0 15px #ff6f00;
+      
+    }
+    50% {
+        text-shadow: 0 0 15px #ffeb3b, 0 0 25px #ff6f00, 0 0 35px #ff6f00;
+    }
+}
+
+.scrolling-banner {
+    background-color: #e53935;
+    color: #ffeb3b;
+    padding: 12px 0;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: var(--font-nav);
+    transition: background-color 0.2s;
+ 
+}
+
+
+
+.banner-text {
+    text-decoration: none;
+    color: yellow;
+    display: flex;
+    animation: scroll-left 25s linear infinite;
+    white-space: nowrap;
+}
+
+.banner-text span {
+    display: inline-block;
+    padding: 0 40px;
+    white-space: nowrap;
+    animation: glow-effect 1s ease-in-out infinite;
+}
+
+/* NEW Badge with Zig-Zag Ellipse */
+@keyframes pulse-badge {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 235, 59, 0.8));
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 12px rgba(255, 235, 59, 1));
+    }
+}
+
+.new-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffeb3b, #ff9800);
+    color: #c62828;
+    padding: 4px 12px;
+    margin-right: 8px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    animation: pulse-badge 1.2s ease-in-out infinite;
+    border: 2px dashed #ff6f00;
+    box-shadow: 0 0 8px rgba(255, 235, 59, 0.9);
+}
+
+.new-badge::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background: 
+        linear-gradient(45deg, transparent 30%, #ff6f00 30%, #ff6f00 40%, transparent 40%),
+        linear-gradient(-45deg, transparent 30%, #ff6f00 30%, #ff6f00 40%, transparent 40%);
+    background-size: 8px 8px;
+    background-position: 0 0, 4px 4px;
+    background-repeat: repeat;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* headmaster */
+
+
+#masterHead{
+    width: 100%;
+    min-height: 80px;
+  
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding: 10px 40px ;
+
+.imgContainer{
+    width: 80px;
+}
+.searchBtn{
+    background-color: #fff;
+   max-width: 40px;
+    height: 40px;
+    border-radius: 100px 100px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 1s  ease;
+    overflow: hidden;
+   i{
+    margin-right: 29px;
+   }
+&:hover{
+    max-width: 100%;
+    
+}
+input{
+    width: 100%;
+}
+}
+}
+
+
+
+
+.hero {
+      position: relative;
+      overflow: hidden;                /* hides slides that are off-screen */
+      background: #fdf6e3;
+    }
+
+    .slides-track {
+      display: flex;                   /* all slides in a row */
+      transition: transform 0.6s ease; /* SMOOTH slide animation */
+      will-change: transform;          /* browser optimization hint */
+    }
+
+    /* Each slide takes exactly the full width of .hero */
+    .slide {
+      min-width: 100%;                 /* each slide = 100% of container width */
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+       img{
+        width: 100%;
+        object-fit: cover;
+    }
+    }
+
+    /* Individual slide backgrounds */
+    .slide-1 {  background: linear-gradient(135deg, #fdf6e3 60%, #fff8e1);
+    }
+    .slide-2 { background: linear-gradient(135deg, #e8f5e9 60%, #f1f8e9); }
+    .slide-3 { background: linear-gradient(135deg, #e3f2fd 60%, #e8eaf6); }
+
+    /* The decorative background mandala pattern */
+    .slide-bg-pattern {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 300px;
+      opacity: 0.07;
+      background: radial-gradient(circle, var(--saffron) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Slide content area */
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    .slide-eyebrow {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--saffron);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    /* Ashoka Chakra spinner in the slide */
+    .chakra-icon {
+      font-size: 28px;
+      animation: spin 8s linear infinite; /* slow spin */
+      display: inline-block;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* The colourful "Buildathon 2025" banner style box */
+    .slide-title-box {
+      background: linear-gradient(90deg, #FF6F00, #4CAF50);
+      color: var(--white);
+      font-size: 32px;
+      font-weight: 900;
+      padding: 10px 24px;
+      border-radius: 6px;
+      margin: 8px auto;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+
+    /* The tag row ("Atmanirbhar Bharat • Swadeshi • ...") */
+    .slide-tags {
+      background: linear-gradient(90deg, #c2185b, #e91e63);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 10px 0;
+      display: inline-block;
+    }
+
+    .slide-desc {
+      color: #1565C0;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    /* ── CAROUSEL CONTROLS (the ‹ › arrows) ── */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .carousel-btn:hover {
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .carousel-btn.prev { left: 16px; }
+    .carousel-btn.next { right: 16px; }
+
+    /* Pause button in centre-bottom of slide */
+    .carousel-pause {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      background: rgba(0,0,0,0.4);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    /* ── DOT INDICATORS ── */
+    .carousel-dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #bbb;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .dot.active {
+      background: var(--saffron);
+      transform: scale(1.3);
+    }
+
+
+    .depWrap{
+       
+         background: red;
+         overflow: hidden;
+         width: 100%;
+         display: flex;
+         background-image: url(/img/dpt_bg_new1.jpg);
+         background-position: -150px 0px;
+         justify-content: space-around;
+        align-items: center;
+        height: 160px;
+    
+    }
+    .sponWrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sponsorGrid > h4{
+        color: #464646;
+        font-size: 2.5rem;
+        text-align: center;
+           font: bold 17px / 19px Verdana;
+           border-bottom: 1px solid #8080805f;
+           padding-bottom: 23px;
+    }
+    .sponsorGrid .grid{
+        display: flex;
+       
+        justify-content: space-around;
+       img{
+         border-right: 1px solid #8080805f;
+       }
+    }
+    .NEP-2020{
+        margin-top: 40px;
+    }
+    .table{
+        width: 90%;
+        font-size: 1.3rem;
+    }
+    .signature{
+        text-align: right;
+        margin-right: 120px ;
+    }
+
+
+    .updtSecWrap {
+  display: flex;
+  gap: 20px;
+  background: #1975be;
+  padding: 30px;
+}
+
+/* Common card style */
+.card {
+  background: white;
+ 
+  padding: 20px;
+}
+
+/* Layout sizes */
+.card-focus {
+  width: 25%;
+  background: #cfe4f3;
+}
+
+.card-updates {
+  width: 45%;
+}
+
+.card-video {
+  width: 30%;
+}
+
+/* Card 1 styles */
+.card-focus h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Fade animation */
+.fade-text {
+  animation: fadeInOut 3s infinite alternate;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Card 2 tabs */
+.tabs {
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.tabs span {
+  cursor: pointer;
+  font-weight: 500;
+ 
+  padding:10px  5px;
+  border-radius: 5px ;
+}
+
+.tabs .active {
+     border: 1px solid ;
+  border-bottom: 2px solid black;
+}
+.tabs span:hover{
+     background: #5d5d5d28;
+}
+
+/* PDF list */
+.pdf-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pdf-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Card 3 iframe */
+.card-video iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
