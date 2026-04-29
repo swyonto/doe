@@ -521,3 +521,238 @@ min-width: 120px;
   width: 100%;
 }
 }
+/* Main container */
+.institute-section {
+  background-image: url(/img/inst_search.jpg);
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+
+  /* Gradient background */
+ 
+  color: #fff;
+}
+
+/* LEFT */
+.left-box {
+  width: 25%;
+}
+
+.left-box h2 {
+  margin-bottom: 15px;
+}
+
+.left-box select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.total {
+  font-weight: bold;
+}
+
+/* DIVIDER */
+.divider {
+  width: 1px;
+  height: 120px;
+  background: rgba(255,255,255,0.5);
+}
+
+/* CENTER */
+.center-box {
+  width: 45%;
+}
+
+.scroll-box {
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scroll styling (optional) */
+.scroll-box::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* Items */
+.inst-item {
+  margin-bottom: 10px;
+}
+
+.inst-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.inst-item p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+/* RIGHT */
+.right-box {
+  width: 30%;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Circle icon */
+.icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.action span {
+  font-weight: 500;
+}
+
+/* Main container */
+.schemes-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background: #e9eaec;
+}
+
+/* LEFT */
+.schemes-left {
+  width: 35%;
+}
+
+.schemes-left h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1c355e;
+}
+
+.scheme-text {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.more-link {
+  color: #1a5dab;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 120px;
+  background: #ccc;
+}
+
+/* RIGHT */
+.schemes-right {
+  display: flex;
+  gap: 25px;
+  flex: 1;
+}
+
+/* Cards */
+.scheme-card {
+  text-align: center;
+  width: 140px;
+}
+
+/* Image box */
+.scheme-card img {
+  width: 100%;
+  height: 80px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  object-fit: cover;
+}
+
+/* Label */
+.scheme-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Container */
+.logo-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 20px;
+  /* * Window (visible area) */ 
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track */
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+/* Each slide */
+.slide {
+  min-width: 150px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image placeholder */
+.slide img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+  background: #ddd; /* placeholder */
+}
+
+/* Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #444;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+}
+

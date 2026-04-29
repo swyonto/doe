@@ -1,0 +1,111 @@
+/* Footer base */
+.gov-footer {
+  background: #3d3d3d;
+  color: #ccc;
+  font-size: 14px;
+  padding: 40px;
+}
+
+/* Layout */
+.footer-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT LINKS */
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+}
+
+.col h5 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.col ul li {
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.col ul li:hover {
+  color: #fff;
+}
+
+/* Divider */
+.footer-divider {
+  width: 1px;
+  background: #777;
+}
+
+/* RIGHT SIDE */
+.footer-right {
+  flex: 1.5;
+}
+
+/* Top info */
+.top-info {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.qr {
+  width: 90px;
+  background: #555;
+}
+
+.nic {
+  width: 120px;
+  background: #555;
+}
+
+/* Text */
+.top-info p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Social */
+.social {
+  margin-top: 15px;
+}
+
+.icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Badges */
+.badges {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.badges img {
+  width: 100px;
+  height: 40px;
+  background: #555;
+  object-fit: cover;
+}
+
+/* Support text */
+.support {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* Bottom */
+.updated {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: right;
+}

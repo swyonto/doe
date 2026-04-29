@@ -1,0 +1,543 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Samagra Shiksha</title>
+<link rel="stylesheet" type="text/css" href="css/theme.css" media="all"/>
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="/css/vertical-tab.css " />
+<link href="css/style-index.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Pop Up Start -->
+<script type="text/javascript">
+        var started;
+  function showLightBox() 
+  { 
+    if (started) return;
+    started = setTimeout(function(){
+        Lightbox.start(document.getElementById('firstImage'));
+        started;
+    },500);
+  }
+</script>
+<!-- Pop Up End -->
+</head>
+<body onLoad="javascript:showLightBox()">
+<div> <a href="images/international_literacy_day.jpg" id="firstImage"> </a> </div>
+<!-- Accebility Pan -->
+<div class="container-fluid accblty">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li><a href="index.html" title="Home" class="homeIcon"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li><span class="glyphicon glyphicon-arrow-down marRight"></span><a href="#main" title="Skip to main content">Skip to main content</a></li>
+          <li><span class="glyphicon glyphicon-arrow-down marRight"></span><a href="#navi" title="Skip to navigation">Skip to navigation</a></li>
+          <li><span class="glyphicon glyphicon-volume-up marRight"></span><a href="screen_reader.html" title="Screen Reader Access">Screen Reader Access</a></li>
+          <!--<li><a href="#" title="English">English</a></li>
+           <li><a href="#" class="language-link" lang="hi" title="Hindi">Hindi</a></li>-->
+          <li class="reduceMar">Text Size:</li>
+          <li class="reduceMar">
+            <button id="btn-decrease" style="color:#000">A-</button>
+          </li>
+          <li class="reduceMar">
+            <button id="btn-orig" style="color:#000">A</button>
+          </li>
+          <li>
+            <button id="btn-increase" style="color:#000">A+</button>
+          </li>
+          <li class="reduceMar"><a href="#" class="normal" title="Normal Text">A</a></li>
+          <li><a href="#" class="contrast" title="Contrast Text">A</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Accebility Pan -->
+<!-- Logo Pan -->
+<div class="container logoPan">
+  <div class="row">
+    <div class="col-md-8"><a href="index.html" title="Samagra Shiksha, Ministry of Education, Department of School Education and Literacy, Government of India" class="logoTitle"><img src="images/samagra-logo-moe.png" alt="Samagra Shiksha, Ministry of Education, Department of School Education and Literacy, Government of India"></a></div>
+    <div class="col-md-4"><a href="index.html" title="Samagra Shiksha" class="ssaLogo"><img src="images/samagra-hindi.png" alt="Samagra Shiksha"></a></div>
+  </div>
+</div>
+<!-- /Logo Pan -->
+<!-- Main Nav -->
+<nav class="navbar navbar-inverse" id="navi">
+  <div class="container-fluid">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a href="about.html" title="About Samagra Shiksha">About Samagra Shiksha</a>
+          <!--<ul class="dropdown-menu">
+            <li><a href="about.html" title="About Scheme" title="About Scheme">About Scheme</a></li>            
+          </ul>-->
+        </li>
+        <li><a href="features.html" title="Features">Features</a></li>
+        <li><a href="framework.html" title="Framework">Framework</a></li>
+        <!--<li><a href="/pab.html" title="PAB">PAB</a></li>-->
+        <li><a href="update.html" title="Documents & Reports">Documents &amp; Reports</a></li>
+        <!--<li><a href="http://samagrashiksha.in/" target="_blank" title="Online Monitoring - PMS">Online Monitoring - PMS</a></li>
+		<li><a href="http://103.7.128.248/" target="_blank" title="Programme for International Student Assessment">PISA</a></li>-->
+        <li><a href="http://103.7.128.246/web/aspi_home1.aspx?AspxAutoDetectCookieSupport=1" target="_blank" title="Aspirational Districts">Aspirational Districts</a></li>
+		<li><a href="infographics.html" title="Infographics">Infographics</a></li>
+		<li><a href="https://samagrashiksha.in" target="_blank" title="PRABANDH">PRABANDH</a></li>
+        <!--<li><audio controls autoplay="true" class="anthem">
+  <source src="school_chale_hum.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /Main Nav -->
+<div class="container-fluid slider-Wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="border:2px solid #fff;">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active"> <img src="images/banner_1.jpg" alt="Samagra Shiksha" style="width:100%;"> </div>
+            <div class="item"> <img src="images/samagra1.jpg" alt="Samagra Shiksha" style="width:100%;"> </div>
+            <!--<div class="item"> <img src="/images/bg3.jpg" alt="SSA" style="width:100%;"> </div>
+            <div class="item"> <img src="images/samagra5.jpg" alt="SSA" style="width:100%;"> </div>-->
+            <div class="item"> <img src="images/samagra2.jpg" alt="SSA" style="width:100%;"> </div>
+            <div class="item"> <img src="images/samagra3.jpg" alt="SSA" style="width:100%;"> </div>
+            <div class="item"> <img src="images/samagra4.jpg" alt="SSA" style="width:100%;"> </div>
+          </div>
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header Carousel -->
+<!-- About -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8" id="main">
+      <h2 class="welcmHead">About Samagra Shiksha</h2>
+      <p class="welcmTxt">The Union Budget, 2018-19, has proposed to treat school education holistically without segmentation from pre-nursery to Class 12.  Samagra Shiksha - an overarching programme for the school education sector extending from pre-school to class 12 has been, therefore, prepared with the broader goal of improving school effectiveness measured in terms of equal opportunities for schooling and equitable learning outcomes. It subsumes the three schemes of Sarva Shiksha Abhiyan (SSA), Rashtriya Madhyamik Shiksha Abhiyan (RMSA) and Teacher Education (TE). </br>
+        This sector-wide development programme/scheme would also help harmonise the implementation mechanisms and transaction costs at all levels, <a href="about.html" > View More</a></p>
+      <div style="text-align:center;"><a href="/features.html" class="btn btn-default" style=" font-size:1.6em; font-weight:600; padding:15px;" target="_blank">Major Features of Samagra Shiksha</a></div>
+    </div>
+    <div class="col-md-4">
+      <div class="update">
+        <h2>Updates</h2>
+        <div class="cont">
+          <ul>
+            <li><a href="docs/samagra_shiksha.pdf" target="_blank" title="Samagra Shiksha Scheme">Samagra Shiksha Scheme</a><img src="images/new-icon-gif-13.jpg" width="25%" height="5%"></li>
+            <li><a href="docs/guidelines_brc_1707.pdf" target="_blank" title="Guidelines for Provisioning of Academic Resource Person for Career Counselling in the BRCs under Samagra Shiksha">Guidelines for Provisioning of Academic Resource Person for Career Counselling in the BRCs under Samagra Shiksha</a></li>
+            <li><a href="docs/SNG_Guidelines.pdf" target="_blank" title="School Nutrition (Kitchen) Gardens Guidelines">School Nutrition (Kitchen) Gardens Guidelines</a></li>
+            <!--<li><a href="docs/Framework_IISE _F.pdf" target="_blank" title="Draft Framework for implementation of the Samagra Shiksha - an Integrated Scheme for School Education">Draft Framework for implementation of the Samagra Shiksha - an Integrated Scheme for School Education</a></li>-->
+          </ul>
+          <div class="more-updt"> <a href="update.html" title="More...">More...</a> </div>
+        </div>
+      </div>
+      <div class="monit-img"> <a href="http://samagrashiksha.in" target="_blank" title="Online Monitoring PRABANDH System"><img src="images/PRABANDH_System.jpeg" width="100%" class="img-responsive" alt=""></a> </div>
+    </div>
+    <!--<div class="col-md-4">	
+                	<div class="update">
+                    	<h2><a href="/update.jsp" title="Updates" style="color:#fff;">Updates</a></h2>
+                        <div class="cont">
+                        	<ul>
+                            <li><a href="/docs/Framework_IISE _F.pdf" target="_blank" title="Draft Framework for implementation of the Samagra Shiksha - an Integrated Scheme for School Education">Draft Framework for implementation of the Samagra Shiksha - an Integrated Scheme for School Education</a></li>
+  							<li><a href="/docs/Letter for SIS to States and UTs.pdf" target="_blank" title="Samagra Shiksha - Integrated Scheme for School Education approved by CCEA (Letter dated 05 April, 2018)d">Samagra Shiksha - Integrated Scheme for School Education approved by CCEA (Letter dated 05 April, 2018)</a></li>
+                           	</ul>
+                           <div style="float:right; width:auto;"><a href="/update.jsp" style="color:#f05551; font-size:1.3em; text-decoration:none; padding-bottom:20px;">more...</a></div>
+                        </div>
+                    </div>
+                </div>-->
+  </div>
+</div>
+<!-- /About -->
+<div class="container-fluid blueBg1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"> <a href="http://udiseplus.gov.in" target="_blank" title="UDISE Plus"><img src="images/udise.jpg" alt=""></a> </div>
+      <div class="col-md-6"> <a href="http://repository.seshagun.nic.in" target="_blank" title="Repository of Best Practices"><img src="images/repository.jpg" alt=""></a> </div>
+    </div>
+  </div>
+</div>
+<!-- Initiative Links -->
+<div class="container initBdr">
+  <h2 class="initHead">Initiatives</h2>
+  <div class="row">
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap1">
+        <div class="pic"><img src="images/ECC.jpg" alt=""></div>
+        <div class="initCont">
+          <h3>Support at Pre-School level (Early Childhood Care and Education)</h3>
+          <p>Support has been provided for the efforts of State Govt in providing Pre-school education in schools of up to 2 years duration..</p>
+          <a href="early_childhood.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap2">
+        <div class="pic"><img src="images/padhe-bharat.jpg" alt=""></div>
+        <div class="initCont">
+          <h3>Padhe Bharat Badhe Bharat</h3>
+          <p>Padhe Bharat Badhe Bharat is being implemented under the aegis of the Sarva Shiksha Abhiyan in 2014 to ensure quality at the foundational years of schooling i.e., classes I & II.</p>
+          <a href="http://mhrd.gov.in/sites/upload_files/mhrd/files/document-reports/Padhe-Bharat-Badhe-Bharat.pdf" class="btn btn-default" title="Know More" target="_blank">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap3">
+        <div class="picRT"><img src="images/libraray.jpg" width="270" height="241" alt=""></div>
+        <div class="initContRT">
+          <h3>Library grant for promoting reading habits</h3>
+          <p>In order to complement the activities under Padhe Bharat Badhe Bharat and inculcate the reading habits among students of all ages, strengthening of school libraries is being undertaken including provision of books.</p>
+          <a href="library.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap4">
+        <div class="picRT"><img src="images/sports.jpg" width="270" height="241" alt=""></div>
+        <div class="initContRT">
+          <h3>Sports and Physical Education</h3>
+          <p>Sports in schools have immense benefits for both children and for educational systems. Sports have the potential to make distinctive contributions to the development of children’s fundamental movement skills and physical competences..</p>
+          <a href="sports.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap5">
+        <div class="pic"><img src="images/rangotsav.jpg" width="270" height="241" alt=""></div>
+        <div class="initCont">
+          <h3>Experiential Learning (Rangotsav)</h3>
+          <p>For the promotion of experiential learning and joyful learning, various activities are organized for both students and teachers. Some of the major activities under taken are Kala Utsav; Role Play Competition.</p>
+          <a href="rangotsav.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap6">
+        <div class="pic"><img src="images/children_special.jpg" width="270" height="241" alt=""></div>
+        <div class="initCont">
+          <h3>Inclusive Education for Children with Special Needs</h3>
+          <p>Support has been provided for various student oriented activities which include identification and assessment of Children with Special Needs (CWSN), provision of aids, appliances..</p>
+          <a href="inclusive.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap">
+        <div class="picRT"><img src="images/kgbv.jpg" width="270" height="241" alt=""></div>
+        <div class="initContRT">
+          <h3>Kasturba Gandhi Balika Vidyalaya (KGBV)</h3>
+          <p>Bridging gender and social category gaps at all levels of school education is one of the major objectives of the Samagra Shiksha. Consequently, to encourage the participation of girls..</p>
+          <a href="kgbv.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap7">
+        <div class="picRT"><img src="images/youth-club.jpg" alt=""></div>
+        <div class="initContRT">
+          <h3>Constitution of Youth Club and Eco Club</h3>
+          <p>Youth clubs in schools are an instrument to develop life skills, build self-esteem, develop self-confidence and resilience and counter negative emotions of stress, shame and fear.</p>
+          <a href="youth.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap1">
+        <div class="pic"><img src="images/self-defence.jpg" width="270" height="241" alt=""></div>
+        <div class="initCont">
+          <h3>Self Defence Training (RAKSHA)</h3>
+          <p>Keeping in view, the rising number of crimes against girls in the country, it is important to provide self-defence training to them in the schools to ensure their safety and security.</p>
+          <a href="raksha.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap2">
+        <div class="pic"><img src="images/school-sefety.jpg" width="270" height="241" alt=""></div>
+        <div class="initCont">
+          <h3>School Safety</h3>
+          <p>Children have right to live with dignity and have access to education in an environment that is safe protective and conducive to growth & development.</p>
+          <a href="safety.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap3">
+        <div class="picRT"><img src="images/vocational.jpg" width="270" height="241" alt=""></div>
+        <div class="initContRT">
+          <h3>Vocational Education</h3>
+          <p>The scheme seeks to integrate vocational education with general academic education with an aim to prepare educated, employable and competitive human resource for various sectors of the economy and the global market.</p>
+          <a href="vocational.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap4">
+        <div class="picRT"><img src="images/tt.jpg" alt=""></div>
+        <div class="initContRT">
+          <h3>Integrated Teacher Training Programme (Elementary level)</h3>
+          <p>In-service teacher and teacher educators training have been an integral part of erstwhile Schemes of SSA, RMSA and CSSTE.</p>
+          <a href="integrated.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap5">
+        <div class="pic"><img src="images/nas.jpg" width="270" height="241" alt=""></div>
+        <div class="initCont">
+          <h3>School Based Assessment (SBA)</h3>
+          <p>Preparations for NAS 2020 (Pre NAS 2020) interventions have been initiated to reach out to all the districts of different States and UTs.</p>
+          <a href="sba.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+    <div class="col-md-6 init_marTop1">
+      <div class="init_wrap6">
+        <div class="pic"><img src="images/sv.jpg" alt=""></div>
+        <div class="initCont">
+          <h3>Swachh Vidyalaya</h3>
+          <p>The Swachh Vidyalaya Initiative started with the construction of toilets, then moved to the maintenance of toilets and activities such as hand washing ..</p>
+          <a href="swachh.html" class="btn btn-default" title="Know More">Know More</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Initiative Links -->
+<!-- Red Bg Links -->
+<div class="container-fluid redBG">
+  <div class="container traparentBG">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <div class="cont first bdrRT">
+          <h3>Shaala Siddhi</h3>
+          <p>The programme envisions reaching 1.6 million schools in the country through a compressive system of school evaluation.</p>
+          <a href="http://shaalasiddhi.niepa.ac.in/" title="know more..." target="_blank">know more...</a> </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <div class="cont bdrRT">
+          <h3>NAS &amp; SAS, Learning Outcomes</h3>
+          <p>To monitor improvement in childrens learning levels and to periodically assess the health of the government education system as a whole.</p>
+          <a href="http://www.ncert.nic.in/programmes/NAS/NAS.html" title="know more..." target="_blank">know more...</a> </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <div class="cont bdrRT first1 topMar1">
+          <h3>Training of Untrained Teachers (NIOS)</h3>
+          <p>The programme has been developed by the Academic Department, NIOS on the initiative of MHRD, Govt. of India, keeping in view the NCF 2005, RTE 2009 and NCFTE 2010.</p>
+          <a href="http://dled.nios.ac.in/" title="know more..." target="_blank">know more...</a> </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <div class="cont topMar1">
+          <h3>School Leadership and Management</h3>
+          <p>National Centre for School Leadership has been established to empower school leaders with knowledge, skills and attitudes to transform schools.</p>
+          <a href="http://pslm.niepa.ac.in/" title="School Leadership and Management" target="_blank">know more...</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Red Bg Links -->
+<!-- Success Story, InFocus etc -->
+<!-- <div class="boxWrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="contBox">
+          <h2 class="headBoxes">Major Documents</h2>
+          <ul class="docList">
+            <li><a href="http://dled.nios.ac.in/" title="Training of Untrained Teachers (NIOS)" target="_blank">Training of Untrained Teachers (NIOS)</a></li>
+            <li><a href="http://seshagun.gov.in/pab-minutes" title="PAB" target="_blank">PAB</a></li>
+            <li style="border-bottom:none;"><a href="http://seshagun.nic.in/documents.html" title="Audit Report" target="_blank">Audit Report</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="contBox">
+          <h2 class="headBoxes GIS">School GIS</h2>
+          <a href="http://schoolgis.nic.in/" title="School GIS" target="_blank"><img src="http://164.100.78.75/cms/images/gis-pic.png" alt="School GIS" class="GISimg"></a> </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contBox">
+          <h2 class="headBoxes">Right to Education (RTE)</h2>
+          <a href="http://mhrd.gov.in/rte" title="MHRD RTE" target="_blank"><img src="http://164.100.78.75/cms/images/rte-pic.jpg" alt="RTE"></a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!-- /Success Story, InFocus etc -->
+<!-- Button Links -->
+<!--<div class="container topMarBtn">
+    	<div class="row">
+        	<div class="col-md-6">
+            	<a href="#" title="Document &amp; Report" class="doc-report">Document &amp; Report</a>
+            </div>
+            <div class="col-md-6">
+            	<a href="#" title="Research Studies" class="resrch-Stdies">Research Studies</a>
+            </div>
+        </div>
+    </div>-->
+<!-- /Button Links -->
+<!-- Media -->
+<div class="container-fluid social-media">
+  <div class="container">
+    <div class="row">
+      <!--<div class="col-md-4">
+        <iframe width="100%" height="270" src="https://www.youtube.com/embed/h_vyk1XEYVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-4">
+        <iframe width="100%" height="270" src="https://www.youtube.com/embed/dx_EhNBCSe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>-->
+      <div class="col-md-4">
+        <iframe width="100%" height="275" src="https://www.youtube.com/embed/ma_mUTMfwNU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-4"> <a href="docs/Samagra Brochure.pdf" target="_blank" title="Samagra Shiksha Brochure"><img src="images/brochure.jpg" width="100%" alt="brochure"></a> </div>
+      <div class="col-md-4"> <a href="https://dsel.education.gov.in" target="_blank" title="D/o School Education & Literacy"><img src="images/se1.jpg" width="100%"></a></div>
+    </div>
+  </div>
+</div>
+<!-- /Media -->
+<!-- Bottom Logo's -->
+<div class="container">
+  <ul class="btmLogos">
+    <li><a href="http://mhrd.gov.in/" title="MoE" target="_blank"><img src="images/moe-logo.jpg" width="110" height="50" alt=""></a></li>
+    <!--<li><a href="http://epathshala.nic.in/" title="e-Pathshala" target="_blank"><img src="images/epathshala-logo.jpg" width="127" height="50" alt=""></a></li>
+    <li><a href="http://mhrd.gov.in/ICT-Initiatives-Saransh" title="Saaransh" target="_blank"><img src="images/saaransh-logo.jpg" width="79" height="50" alt=""></a></li>-->
+    <li><a href="http://schoolgis.nic.in/" title="School GIS" target="_blank"><img src="images/schoolgis-logo.jpg" width="127" height="50" alt=""></a></li>
+    <!-- <li><a href="#" title="SSA MIS"><img src="/images/ssamis-logo.jpg" width="70" height="50" alt=""></a></li>-->
+    <li class="last"><a href="http://src.udiseplus.gov.in" title="Know Your School" target="_blank"><img src="images/schoolreport-logo.jpg" width="166" height="50" alt=""></a></li>
+  </ul>
+</div>
+<!-- /Bottom Logo's -->
+<!-- Footer -->
+<div class="container-fluid footerWrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-3">
+        <ul class="footLink">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li><a href="about.html" title="About Samagra Shiksha">About Samagra Shiksha</a></li>
+          <li><a href="framework.html" title="Framework">Framework</a></li>
+          <li><a href="http://seshagun.gov.in/pab-minutes" title="PAB" target="_blank">PAB</a></li>
+          <li class="last"><a href="update.html" title="Documents">Documents & Reports</a></li>
+        </ul>
+        <ul class="footLink">
+          <li>
+            <h3>Multimedia</h3>
+          </li>
+          <li><a href="https://www.youtube.com/user/HRDMinistry" title="Youtube Channel" target="_blank">Youtube Channel</a></li>
+          <li><a href="https://mhrd.gov.in/audios" title="Audio" target="_blank">Audio</a></li>
+          <li><a href="https://mhrd.gov.in/gallery" title="Photo Gallery" target="_blank">Photo Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-3">
+        <ul class="footLink">
+          <li>
+            <h3 class="noTopMar">Initiatives</h3>
+          </li>
+          <li><a href="https://mhrd.gov.in/sites/upload_files/mhrd/files/document-reports/Padhe-Bharat-Badhe-Bharat.pdf" target="_blank" title="Padhe Bharat Badhe Bharat" >Padhe Bharat Badhe Bharat</a></li>
+          <li><a href="http://udiseplus.gov.in/" >UDISE+</a></li>
+          <li><a href="https://mhrd.gov.in/rashtriya-avishkar-abhiyan" target="_blank" title="Rashtriya Avishkar Abhiyan" >Rashtriya Avishkar Abhiyan</a></li>
+          <li><a href="http://www.swachhvidyalaya.com/" target="_blank" title="Swachh Vidyalaya">Swachh Vidyalaya</a></li>
+          <li><a href="http://shaalasiddhi.niepa.ac.in/" target="_blank" title="Shala Siddhi" >Shala Siddhi</a></li>
+          <li><a href="http://www.ncert.nic.in/programmes/NAS/NAS.html" title="NAS &amp; SAS, Learning Outsources" target="_blank" >NAS &amp; SAS, Learning Outsources</a></li>
+          <li><a href="http://pslm.niepa.ac.in/" target="_blank"  title="School Leadership">School Leadership</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-3">
+        <ul class="footLink">
+          <li><a href="https://mhrd.gov.in/rte" title="RTE" target="_blank">RTE</a></li>
+          <li><a href="https://mhrd.gov.in/documents_reports" title="Document &amp; Report" target="_blank">Document &amp; Report</a></li>
+        </ul>
+        <ul class="footLink">
+          <li><a href="https://mhrd.gov.in/terms-condition" title="Terms &amp; Conditions" target="_blank">Terms &amp; Conditions</a></li>
+          <li><a href="https://mhrd.gov.in/privacy-policy" title="Privacy Policy" target="_blank">Privacy Policy</a></li>
+          <li><a href="https://mhrd.gov.in/copyright_policy" title="Copyright Policy" target="_blank">Copyright Policy</a></li>
+          <li><a href="https://mhrd.gov.in/hyperlink-policy" title="Hyperlink Policy" target="_blank">Hyperlink Policy</a></li>
+          <li><a href="https://mhrd.gov.in/disclaimer" title="Disclaimer" target="_blank">Disclaimer</a></li>
+        </ul>
+        <ul class="footLink">
+          <li><a href="https://mhrd.gov.in/accessibility-statement" title="Accessibility Statement" target="_blank">Accessibility Statement</a></li>
+          <li><a href="https://mhrd.gov.in/feedback" title="Feedback" target="_blank">Feedback</a></li>
+          <li><a href="https://mhrd.gov.in/help" title="Help" target="_blank">Help</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12 bdrRtFoot">
+        <div class="visitCount">
+          <p><strong>Visitors Counter:</strong> 854804</p>
+          <p><strong>Last Updated on:</strong> 07-August-2021</p>
+        </div>
+        <div class="cpyTxt">
+          <p>Contents provided by Ministry of Education<br>
+            Government of India.</p>
+          <p>Website hosted &amp; maintained by National Informatics Centre. <br>
+            Copyright 2020 NIC. All rights reserved.</p>
+        </div>
+        <div class="socialMed">
+          <h2 class="mediaHead">Follow us on:</h2>
+          <a href="https://www.facebook.com/EduMinOfIndia" target="_blank" title="Facebook" class="fb"><i class="fa fa-facebook-square"></i></a> <a href="https://twitter.com/EduMinOfIndia" target="_blank" title="Twitter" class="twitter"><i class="fa fa-twitter-square"></i></a> <a href="https://www.youtube.com/user/HRDMinistry" target="_blank" title="Youtube" class="youtube"><i class="fa fa-youtube-square"></i></a> </div>
+        <br class="clear">
+        <div class="support">
+          <p> <strong>Supports:</strong> &nbsp; <i class="fa fa-firefox"></i>&nbsp;Firefox 2.0+ &nbsp; <i class="fa fa-chrome"></i>&nbsp;Google Chrome 6.0+ &nbsp; <i class="fa fa-internet-explorer"></i>&nbsp;Internet Explorer 8.0+ &nbsp; <i class="fa fa-safari"></i>&nbsp;Safari 4.0+ </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Footer -->
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>var $affectedElements = $("p, a, li, h3, h1, h2"); // Can be extended, ex. $("div, p, span.someClass")
+
+// Storing the original size in a data attribute so size can be reset
+$affectedElements.each( function(){
+  var $this = $(this);
+  $this.data("orig-size", $this.css("font-size") );
+});
+
+$("#btn-increase").click(function(){
+  changeFontSize(1);
+})
+
+$("#btn-decrease").click(function(){
+  changeFontSize(-1);
+})
+
+$("#btn-orig").click(function(){
+  $affectedElements.each( function(){
+        var $this = $(this);
+        $this.css( "font-size" , $this.data("orig-size") );
+   });
+})
+
+function changeFontSize(direction){
+    $affectedElements.each( function(){
+        var $this = $(this);
+        $this.css( "font-size" , parseInt($this.css("font-size"))+direction );
+    });
+}</script>
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+<!-- Vertical Tab -->
+<script type="text/javascript">
+   $(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+</script>
+</body>
+</html>
