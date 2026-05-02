@@ -1,0 +1,98 @@
+
+    .about-banner {
+      background:url(/img/about/inner-header-bg.gif);
+
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 0px 80px;
+      text-align: center;
+      margin-bottom: 30px;
+      align-items: center;
+    }
+    .about-banner h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight:500;
+    }
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+    }
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+    .about-content {
+      padding: 0 20px;
+    }
+    .about-main {
+      background: white;
+      padding: 30px;
+      border-radius: 4px;
+    }
+    .about-sidebar {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 4px;
+    }
+    .about-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px;
+      margin: -20px -20px 20px -20px;
+      font-size: 1.1em;
+    }
+    .about-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .about-sidebar li {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+    .about-sidebar li:last-child {
+      border-bottom: none;
+    }
+    .about-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .about-sidebar a:hover {
+      color: #0066cc;
+    }
+    .about-sidebar a:before {
+      content: "▶";
+      margin-right: 10px;
+      font-size: 0.8em;
+    }
+    .section-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .section-title:first-child {
+      margin-top: 0;
+    }
+    .section-content {
+      line-height: 1.8;
+      color: #555;
+      text-align: justify;
+    }
+    .section-content ul {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+    .section-content li {
+      margin-bottom: 10px;
+      list-style: disc;
+    }
+  

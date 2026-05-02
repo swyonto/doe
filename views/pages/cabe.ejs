@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Advisory Board of Education (CABE) | Ministry of Education</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .page-banner {
+      background: #005073;
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 15px 80px;
+      text-align: center;
+      margin-bottom: 0px;
+      align-items: center;
+    }
+
+    .page-banner h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .page-content {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .page-main {
+      background: white;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 1.6em;
+      margin-bottom: 25px;
+      color: #555;
+      font-weight: 400;
+    }
+
+    /* Filter Form */
+    .filter-section {
+      background: #fcfcfc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .filter-section label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+      color: #333;
+    }
+
+    .filter-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .filter-controls select {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 250px;
+    }
+
+    .filter-controls button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 6px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .filter-controls button:hover {
+      background-color: #002244;
+    }
+
+    /* Table */
+    .cabe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .cabe-table th,
+    .cabe-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .cabe-table th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .cabe-table tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .pdf-link {
+      color: #0066cc;
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .pdf-link:hover {
+      text-decoration: underline;
+    }
+
+    .pdf-icon {
+      color: #d9534f;
+      font-size: 1.2em;
+      margin-top: 2px;
+    }
+
+    .col-sno {
+      width: 5%;
+    }
+
+    .col-title {
+      width: 70%;
+    }
+
+    .col-category {
+      width: 25%;
+      font-size: 12px;
+    }
+
+    /* Pagination */
+    .pagination-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .pages-label {
+      font-size: 1.5em;
+      color: #555;
+    }
+
+    .pagination {
+      margin: 0;
+    }
+
+    .pagination a {
+      color: #0066cc;
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      margin: 0 2px;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .pagination a.active {
+      background-color: #f5f5f5;
+      color: #333;
+      border-color: #ccc;
+    }
+
+    .pagination a:hover:not(.active) {
+      background-color: #eee;
+    }
+
+    /* Sidebar */
+    .page-sidebar {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .page-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px;
+      margin: -20px -20px 20px -20px;
+      font-size: 1.1em;
+    }
+
+    .page-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page-sidebar li {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .page-sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .page-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .page-sidebar a:hover {
+      color: #0066cc;
+    }
+
+    .page-sidebar a:before {
+      content: "▶";
+      margin-right: 8px;
+      font-size: 0.7em;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
+
+    <div class="page-banner">
+      <h1>Documents & Reports</h1>
+    </div>
+
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Documents & Reports</a></li>
+          <li><a href="#">Advisory Bodies</a></li>
+          <li class="active">CABE</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="container">
+        <div class="row">
+          <!-- Main Content -->
+          <div class="col-md-9">
+            <div class="page-main">
+
+              <div class="filter-section">
+                <label for="departmentSelect">Select Department</label>
+                <div class="filter-controls">
+                  <select id="departmentSelect">
+                    <option value="All">- All -</option>
+                    <option value="Dept. of Higher Education">Dept. of Higher Education</option>
+                    <option value="Dept. of School Education & Literacy">Dept. of School Education & Literacy</option>
+                    <option value="General">General</option>
+                  </select>
+                  <button onclick="applyFilter()">Apply</button>
+                </div>
+              </div>
+
+              <h2 class="section-title">Central Advisory Board of Education</h2>
+
+              <table class="cabe-table" id="cabeTable">
+                <thead>
+                  <tr>
+                    <th class="col-sno">S.No.</th>
+                    <th class="col-title">Title</th>
+                    <th class="col-category">Category</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <!-- Data will be injected here via JS -->
+                </tbody>
+              </table>
+
+              <div class="pagination-container">
+                <div class="pages-label">Pages</div>
+                <div class="pagination" id="paginationControls">
+                  <!-- Pagination will be injected here via JS -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-md-3">
+            <div class="page-sidebar">
+              <h3>About MoE</h3>
+              <ul>
+                <li><a href="/about-moe">Overview</a></li>
+                <li><a href="/constitutional-provision">Constitutional Provision</a></li>
+                <li><a href="/allocation-business">Allocation of Business Rules</a></li>
+                <li><a href="/policy-initiatives">Policy Initiatives</a></li>
+                <li><a href="/citizens-charters">Citizen's Charter</a></li>
+                <li><a href="#">Advisory Bodies</a>
+                  <ul style="padding-left: 15px; margin-top: 10px;">
+                    <li><a href="/cabe">CABE</a></li>
+                  </ul>
+                </li>
+                <li><a href="/organisation-chart">Organogram</a></li>
+                <li><a href="#">Schemes</a></li>
+                <li><a href="#">Who's Who</a></li>
+                <li><a href="#">Telephone Directory KB-2</a></li>
+                <li><a href="#">Telephone Directory</a></li>
+                <li><a href="#">Services for MoE Officials</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script>
+        // 30 Items from the screenshots
+        const allData = [
+          { id: 1, title: 'Summary Record of the discussions of the Special Session of the Central Advisory Board of Education (CABE) on Draft National Education Policy (NEP) held on 21st, September, 2019 - (Hindi) - (203.68 KB)', category: 'Dept. of Higher Education' },
+          { id: 2, title: 'Summary Record of the discussions of the Special Session of the Central Advisory Board of Education (CABE) on Draft National Education Policy (NEP) held on 21st, September, 2019 - (545.05 KB)', category: 'Dept. of Higher Education' },
+          { id: 3, title: 'दिनांक १५ और १६ जनवरी, २०१८ को आयोजित केंद्रीय सलाहकार शिक्षा बोर्ड की ६५वीं बैठक में हुई चर्चा का रिकॉर्ड - (11.45 MB)', category: 'Dept. of Higher Education' },
+          { id: 4, title: 'Record of Discussion of the 65th Meeting of the Central Advisory Board of Education (CABE) held on 15th & 16 January, 2018 - (6.74 MB)', category: 'Dept. of Higher Education' },
+          { id: 5, title: 'Agenda for the 65th Meeting of CABE scheduled for 15th-16th January, 2018 - (506.11 KB)', category: 'Dept. of School Education & Literacy' },
+          { id: 6, title: 'Re-constitution of Committee of CABE on Extension of the Right of Children to Free and Compulsory Education Act, 2009 to Pre-school education and secondary education - (21.62 KB)', category: 'Dept. of Higher Education' },
+          { id: 7, title: 'केन्द्रीय शिक्षा सलाहकार बोर्ड (सीएबीई) की दिनांक 25 अक्टूबर, 2016 को आयोजित 64वीं बैठक की कार्यवाही का रिकॉर्ड। - (278.78 KB)', category: 'Dept. of Higher Education' },
+          { id: 8, title: 'Record of Proceedings of the 64th Meeting of CABE held on 25th October, 2016 - (471.42 KB)', category: 'Dept. of Higher Education' },
+          { id: 9, title: 'Partial modification of the Order No.2-16/2011-PN-1 regarding re-constitution of the Committee of CABE on "Extension of Right of Children to Free and Compulsory Education Act, 2009 to Pre-school education and secondary education" - (25.62 KB)', category: 'Dept. of Higher Education' },
+          { id: 10, title: 'Agenda for the 64th Meeting of CABE scheduled for 25th October, 2016 - (1.63 MB)', category: 'Dept. of Higher Education' },
+          { id: 11, title: '19 अगस्त, 2015 को नई दिल्ली में आयोजित केन्द्रीय शिक्षा सलाहकार बोर्ड (केब) की 63वीं बैठक की कार्यवाहियों का रिकॉर्ड - (317.77 KB)', category: 'Dept. of Higher Education' },
+          { id: 12, title: 'The composition of the Sub-Committee of CABE on "Extension of the Right of Children to Free and Compulsory Education Act, 2009 to Pre-school education and secondary education" - (129.6 KB)', category: 'Dept. of Higher Education' },
+          { id: 13, title: 'संकल्प दिनांक दिनांक 11 जून, 2015 - केंद्रीय शिक्षा सलाहकार बोर्ड को पुनर्गठन करने के बारे में - (556 KB)', category: 'Dept. of Higher Education' },
+          { id: 14, title: 'Reconstitution of CABE Sub-Committee on the subject of Extension of the Right of Children to Free and Compulsory Education Act, 2009 to Pre-school education and secondary education - (59.83 KB)', category: 'Dept. of Higher Education' },
+          { id: 15, title: 'Record of Proceedings of the 63rd meeting of Central Advisory Board of Education (CABE) held on 19th August, 2015 at New Delhi - (1.75 MB)', category: 'Dept. of Higher Education' },
+          { id: 16, title: 'Constitution of Sub-Committee to Devise Pathways to Improve Conditions of Government Schools.- Partial modification of Order - (45.83 KB)', category: 'Dept. of Higher Education' },
+          { id: 17, title: 'Constitution of Sub-Committee of CABE to Devise Pathways to improve Conditions of Government Schools - (554.38 KB)', category: 'Dept. of Higher Education' },
+          { id: 18, title: 'Constitution of Sub-Committee of CABE on Skill & Technical Education in School & Higher Education System - (590.16 KB)', category: 'Dept. of Higher Education' },
+          { id: 19, title: 'Constitution of Sub-Committee of CABE to Devise Pathway of Re-Engaging Out of School Children - (797.35 KB)', category: 'Dept. of Higher Education' },
+          { id: 20, title: 'Constitution of Sub-Committee of CABE for assessment and implementation of CCE in the context of No Detention Provision in the RTE, 2009 - (485.57 KB)', category: 'Dept. of Higher Education' },
+          { id: 21, title: 'Summary Record of Discussion of the 63rd CABE Meeting held on 19th August, 2015 at New Delhi - (142.82 KB)', category: 'Dept. of Higher Education' },
+          { id: 22, title: 'Agenda Items for 63rd CABE MEETING to be held on 19th August, 2015 at Vigyan Bhawan, New Delhi - (11.68 MB)', category: 'Dept. of Higher Education' },
+          { id: 23, title: 'Report of CABE Sub-Committee on Assessment & Implementation of CCE & No Detention Provision - (4.84 MB)', category: 'Dept. of Higher Education' },
+          { id: 24, title: 'Status Report : CABE Committee on Extension of right of children to Free and Compulsory Education Act 2009 to Pre-School and Secondary Education - (1.93 MB)', category: 'Dept. of Higher Education' },
+          { id: 25, title: 'The 63rd Meeting of the CABE to be held at 10.00AM on 19th August, 2015 -- reg. - (37.46 KB)', category: 'Dept. of Higher Education' },
+          { id: 26, title: 'CABE Resolution dated 11th June, 2015 - (94.09 KB)', category: 'General' },
+          { id: 27, title: 'Record of Proceedings of the 62nd CABE Meeting held on 10th October 2013 at New Delhi - (5.64 MB)', category: 'Dept. of Higher Education' },
+          { id: 28, title: 'Summary Record of Discussion of the 62nd CABE Meeting held on 10th October, 2013 at New Delhi - (4.35 MB)', category: 'Dept. of Higher Education' },
+          { id: 29, title: 'Resolution dated 21.11.2013 regarding nomination of Dr. Vidya Yeravedkar, Principal Director, Symbiosis, Pune - (36.61 KB)', category: 'Dept. of Higher Education' },
+          { id: 30, title: 'Summary Record of Discussion of the 58th CABE held on 7th June, 2011 - (15.47 KB)', category: 'Dept. of Higher Education' }
+        ];
+
+        let filteredData = [...allData];
+        let currentPage = 1;
+        const itemsPerPage = 10;
+
+        function renderTable() {
+          const tbody = document.getElementById('tableBody');
+          tbody.innerHTML = '';
+
+          if (filteredData.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="3" style="text-align: center;">No documents found.</td></tr>';
+            renderPagination();
+            return;
+          }
+
+          const startIndex = (currentPage - 1) * itemsPerPage;
+          const endIndex = Math.min(startIndex + itemsPerPage, filteredData.length);
+
+          for (let i = startIndex; i < endIndex; i++) {
+            const item = filteredData[i];
+            const tr = document.createElement('tr');
+
+            tr.innerHTML = `
+          <td>${item.id}</td>
+          <td>
+            <a href="/pdf/Sumrec63CABE.pdf" class="pdf-link">
+              <i class="bi bi-file-earmark-pdf pdf-icon"></i>
+              <span>${item.title}</span>
+            </a>
+          </td>
+          <td>${item.category}</td>
+        `;
+            tbody.appendChild(tr);
+          }
+
+          renderPagination();
+        }
+
+        function renderPagination() {
+          const paginationContainer = document.getElementById('paginationControls');
+          paginationContainer.innerHTML = '';
+
+          const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+          if (totalPages <= 1) return; // No pagination needed
+
+          // "first" and "previous"
+          if (currentPage > 1) {
+            paginationContainer.innerHTML += `<a onclick="goToPage(1)">« first</a>`;
+            paginationContainer.innerHTML += `<a onclick="goToPage(${currentPage - 1})">‹ previous</a>`;
+          } else {
+            paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">« first</a>`;
+            paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">‹ previous</a>`;
+          }
+
+          // Page numbers
+          for (let i = 1; i <= totalPages; i++) {
+            if (i === currentPage) {
+              paginationContainer.innerHTML += `<a class="active">${i}</a>`;
+            } else {
+              paginationContainer.innerHTML += `<a onclick="goToPage(${i})">${i}</a>`;
+            }
+          }
+
+          // "next" and "last"
+          if (currentPage < totalPages) {
+            paginationContainer.innerHTML += `<a onclick="goToPage(${currentPage + 1})">next ›</a>`;
+            paginationContainer.innerHTML += `<a onclick="goToPage(${totalPages})">last »</a>`;
+          } else {
+            paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">next ›</a>`;
+            paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">last »</a>`;
+          }
+        }
+
+        function goToPage(page) {
+          currentPage = page;
+          renderTable();
+        }
+
+        function applyFilter() {
+          const selectedDept = document.getElementById('departmentSelect').value;
+
+          if (selectedDept === 'All') {
+            filteredData = [...allData];
+          } else {
+            filteredData = allData.filter(item => item.category === selectedDept);
+          }
+
+          currentPage = 1; // Reset to first page
+          renderTable();
+        }
+
+        // Initial render
+        window.onload = () => {
+          renderTable();
+        };
+      </script>
+</body>
+
+</html>

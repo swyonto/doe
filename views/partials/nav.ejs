@@ -1,118 +1,129 @@
- <div class="top-bar">
+<div class="top-bar">
 
-    <!-- Left group: date/time (filled by JS below) -->
-    <div class="left-group">
-      <span id="datetime"></span>
-    </div>
-
-    <!-- Right group: skip links, screen reader, font controls, language -->
-    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:4px;">
-      <a href="/"><i class="glyphicon glyphicon-home"></i> Home</a>
-      <a href="#main"><i class="glyphicon glyphicon-arrow-down"></i> Skip to main content</a>
-      <a href="#nav"><i class="glyphicon glyphicon-arrow-down"></i> Skip to navigation</a>
-      <a href="#"><i class="glyphicon glyphicon-volume-up"></i> Screen Reader Access</a>
-      <ul class="accbl">
-        <li class="first"><a href="#" class="accbl style-switcher style-black" data-rel="black" title="Black Mode">A</a>
-        </li>
-        <li class="last"><a href="#" class="accbl style-switcher style-default" data-rel="default"
-            title="Default Mode">A</a></li>
-      </ul>
-      <!-- Font size buttons — JS listens to these clicks -->
-      <div class="font-controls">
-        <button onclick="changeFont(-1)" title="Decrease font size">A-</button>
-        <button onclick="changeFont(0)" title="Normal font size">A</button>
-        <button onclick="changeFont(1)" title="Increase font size">A+</button>
-      </div>
-
-      <a href="#" style="margin-left:8px;">English</a>
-      <a href="#">हिन्दी</a>
-    </div>
-
+  <!-- Left group: date/time (filled by JS below) -->
+  <div class="left-group">
+    <span id="datetime"></span>
   </div>
-  <div id="masterHead">
-    <div class="imgContainer">
-      <img src="img/logo_2 .png" alt="">
+
+  <!-- Right group: skip links, screen reader, font controls, language -->
+  <div style="display:flex; align-items:center; flex-wrap:wrap; gap:4px;">
+    <a href="/"><i class="glyphicon glyphicon-home"></i> Home</a>
+    <a href="#main"><i class="glyphicon glyphicon-arrow-down"></i> Skip to main content</a>
+    <a href="#nav"><i class="glyphicon glyphicon-arrow-down"></i> Skip to navigation</a>
+    <a href="#"><i class="glyphicon glyphicon-volume-up"></i> Screen Reader Access</a>
+    <ul class="accbl">
+      <li class="first"><a href="#" class="accbl style-switcher style-black" data-rel="black" title="Black Mode">A</a>
+      </li>
+      <li class="last"><a href="#" class="accbl style-switcher style-default" data-rel="default"
+          title="Default Mode">A</a></li>
+    </ul>
+    <!-- Font size buttons — JS listens to these clicks -->
+    <div class="font-controls">
+      <button onclick="changeFont(-1)" title="Decrease font size">A-</button>
+      <button onclick="changeFont(0)" title="Normal font size">A</button>
+      <button onclick="changeFont(1)" title="Increase font size">A+</button>
     </div>
-    <div class="searchBtn">
-      <input type="text" class="search-input" placeholder="what are you looking for">
-      <i class="glyphicon glyphicon-search search-icon"></i>
-    </div>
+
+    <a href="#" style="margin-left:8px;">English</a>
+    <a href="#">हिन्दी</a>
   </div>
-  <header>
-    <nav class="main-nav">
-      <ul class="nav-menu">
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">ABOUT US <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Constitutional</a></li>
-            <li><a href="#">About Ministry of education</a></li>
-            <li><a href="#">Organisation Chart</a></li>
-            <li><a href="#">Allocation Of Business Rules</a></li>
-            <li><a href="#">Citizen's Charter</a></li>
-            <li><a href="#">Policy Initiatives</a></li>
-            <li><a href="#">Acts And Rules</a></li>
-            <li class="has-submenu"><a href="#">Advisory Bodies <i class="glyphicon glyphicon-menu-right"></i></a>
-              <ul class="submenu">
-                <li><a href="#">Submenu Item 1</a></li>
-                <li><a href="#">Submenu Item 2</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Telephone Directory KB-2</a></li>
-            <li><a href="#">Telephone Directory</a></li>
-            <li class="has-submenu"><a href="#">Services For MoE Officials <i
-                  class="glyphicon glyphicon-menu-right"></i></a>
-              <ul class="submenu">
-                <li><a href="#">Submenu Item 1</a></li>
-                <li><a href="#">Submenu Item 2</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Who's Who</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">DEPARTMENTS <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Department 1</a></li>
-            <li><a href="#">Department 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link">DOCUMENTS & REPORTS</a></li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">STATISTICS <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Statistics 1</a></li>
-            <li><a href="#">Statistics 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">INSTITUTIONS <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Institution 1</a></li>
-            <li><a href="#">Institution 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">BOARDS <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Board 1</a></li>
-            <li><a href="#">Board 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">MULTIMEDIA <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Media 1</a></li>
-            <li><a href="#">Media 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link">DASHBOARD <i class="glyphicon glyphicon-menu-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Dashboard 1</a></li>
-            <li><a href="#">Dashboard 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link">RTI</a></li>
-      </ul>
-    </nav>
-  </header>
+
+</div>
+<div id="masterHead">
+  <div class="imgContainer">
+    <img src="img/logo_2 .png" alt="">
+  </div>
+  <div class="searchBtn">
+    <input type="text" class="search-input" placeholder="what are you looking for">
+    <i class="glyphicon glyphicon-search search-icon"></i>
+  </div>
+</div>
+<header>
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li class="nav-item dropdown">
+        <a href="/about-moe" class="nav-link">ABOUT US <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li class="has-submenu"><a href="/constitutional-provision">Constitutional Provision <i
+                class="glyphicon glyphicon-menu-right"></i></a>
+            <ul class="submenu">
+              <li><a href="/constitutional-provision">Fundamental Rights</a></li>
+              <li><a href="/constitutional-provision">Directive Principles of State Policy</a></li>
+              <li><a href="/constitutional-provision">Fundamental Duties</a></li>
+              <li><a href="/constitutional-provision">Rural & Urban Local Bodies</a></li>
+              <li><a href="/constitutional-provision">Scheduled & Tribal Areas</a></li>
+              <li><a href="/constitutional-provision">Centre-State Relations</a></li>
+              <li><a href="/constitutional-provision">Language</a></li>
+
+            </ul>
+          </li>
+          <li><a href="/organisation-chart">Organisation Chart</a></li>
+          <li><a href="/allocation-business">Allocation Of Business Rules</a></li>
+          <li><a href="/citizens-charters">Citizen's Charter</a></li>
+          <li><a href="/policy-initiatives">Policy Initiatives</a></li>
+          <li><a href="/acts-higher">Acts And Rules</a></li>
+          <li class="has-submenu"><a href="#">Advisory Bodies <i class="glyphicon glyphicon-menu-right"></i></a>
+            <ul class="submenu">
+              <li><a href="/cabe">CABE</a></li>
+
+            </ul>
+          </li>
+          <li><a href="/telephone-directory-kb-2">Telephone Directory KB-2</a></li>
+          <li><a href="/telephone-directory-moe">Telephone Directory</a></li>
+          <li class="has-submenu"><a href="#">Services For MoE Officials <i
+                class="glyphicon glyphicon-menu-right"></i></a>
+            <ul class="submenu">
+              <li><a href="#">Submenu Item 1</a></li>
+              <li><a href="#">Submenu Item 2</a></li>
+            </ul>
+          </li>
+          <li><a href="/minister-page">Who's Who</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">DEPARTMENTS <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Department 1</a></li>
+          <li><a href="#">Department 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">DOCUMENTS & REPORTS</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">STATISTICS <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Statistics 1</a></li>
+          <li><a href="#">Statistics 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">INSTITUTIONS <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Institution 1</a></li>
+          <li><a href="#">Institution 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">BOARDS <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Board 1</a></li>
+          <li><a href="#">Board 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">MULTIMEDIA <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Media 1</a></li>
+          <li><a href="#">Media 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">DASHBOARD <i class="glyphicon glyphicon-menu-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Dashboard 1</a></li>
+          <li><a href="#">Dashboard 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">RTI</a></li>
+    </ul>
+  </nav>
+</header>

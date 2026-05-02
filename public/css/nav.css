@@ -193,6 +193,7 @@
 /* Submenu */
 .has-submenu {
     position: relative;
+    background-color: #ececec;
 }
 
 .submenu {
