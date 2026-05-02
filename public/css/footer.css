@@ -34,11 +34,26 @@
 
 .col ul li {
   margin-bottom: 6px;
-  cursor: pointer;
 }
 
-.col ul li:hover {
+.col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.col ul li a:hover {
   color: #fff;
+  text-decoration: none;
+}
+
+.col h5 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.col h5 a:hover {
+  text-decoration: underline;
 }
 
 /* Divider */

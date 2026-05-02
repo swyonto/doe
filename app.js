@@ -86,7 +86,7 @@ app.get("/rti", (req, res) => {
   res.render("pages/rti.ejs");
 })
 app.get("/NEP-2020", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/pdf/PM Shri Schools Scheme Data.pdf"))
+  res.sendFile(path.join(__dirname, "public/pdf/PM Shri Schools Scheme.pdf"))
 })
 app.get("/telephone-directory-kb-2", (req, res) => {
   res.sendFile(path.join(__dirname, "public/pdf/telephone-directory-moe.pdf"))
