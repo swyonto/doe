@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistics New | Ministry of Education</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .page-banner {
+      background: url(/img/about/inner-header-bg.gif);
+
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 15px 80px;
+      text-align: center;
+      margin-bottom: 0px;
+      align-items: center;
+    }
+
+    .page-banner h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    .page-banner-img {
+      height: 40px;
+    }
+
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .page-content {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .page-main {
+      background: white;
+      padding: 20px;
+    }
+
+    /* Filter Form */
+    .filter-section {
+      background: #fff;
+      padding: 0 0 15px 0;
+      margin-bottom: 20px;
+    }
+
+    .filter-section h4 {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .filter-controls {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .filter-controls select {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 250px;
+      height: 34px;
+    }
+
+    .filter-controls button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 6px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      height: 34px;
+    }
+
+    .filter-controls button:hover {
+      background-color: #002244;
+    }
+
+    /* Table */
+    .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .stats-table th,
+    .stats-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .stats-table th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #333;
+      vertical-align: top;
+    }
+
+    .pdf-link,
+    .excel-link {
+      color: #0066cc;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    .pdf-link:hover,
+    .excel-link:hover {
+      text-decoration: underline;
+    }
+
+    .pdf-icon {
+      color: #d9534f;
+      font-size: 1.2em;
+    }
+
+    .excel-icon {
+      color: #5cb85c;
+      font-size: 1.2em;
+    }
+
+    .na-text {
+      color: #555;
+    }
+
+    /* Pagination */
+    .pagination-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .pages-label {
+      font-size: 1.5em;
+      color: #555;
+    }
+
+    .pagination {
+      margin: 0;
+    }
+
+    .pagination a {
+      color: #0066cc;
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      margin: 0 2px;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .pagination a.active {
+      background-color: #f5f5f5;
+      color: #333;
+      border-color: #ccc;
+    }
+
+    .pagination a:hover:not(.active) {
+      background-color: #eee;
+    }
+
+    /* Sidebar */
+    .page-sidebar {
+      background: #f5f5f5;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+    }
+
+    .page-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px 15px;
+      margin: -15px 0 15px 0;
+      font-size: 1.1em;
+    }
+
+    .page-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page-sidebar li {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .page-sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .page-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      padding: 8px 15px;
+    }
+
+    .page-sidebar a:hover {
+      color: #0066cc;
+      background-color: #ebebeb;
+    }
+
+    .page-sidebar a:before {
+      content: "▶";
+      margin-right: 8px;
+      font-size: 0.6em;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
+
+    <div class="page-banner">
+      <h1>Statistics New</h1>
+      <img src="/img/about/banner-right.jpg" alt="Banner" class="page-banner-img">
+    </div>
+
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">सांख्यिकी</a></li>
+          <li><a href="#">विविध</a></li>
+          <li class="active">Statistics New</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="container">
+        <div class="row">
+          <!-- Main Content -->
+          <div class="col-md-9">
+            <div class="page-main">
+
+              <div class="filter-section">
+                <h4>select</h4>
+                <div class="filter-controls">
+                  <select id="categorySelect" onchange="updateSubcategoryOptions()">
+                    <option value="Any">- Any -</option>
+                    <option value="School Education">School Education</option>
+                    <option value="Higher Education">Higher Education</option>
+                    <option value="Expenditure on Education">Expenditure on Education</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                  </select>
+                  <select id="subcategorySelect" style="display: none;">
+                    <option value="Any">- Any -</option>
+                  </select>
+                  <button onclick="applyFilter()">Apply</button>
+                </div>
+              </div>
+
+              <table class="stats-table" id="statsTable">
+                <thead>
+                  <tr>
+                    <th style="width: 5%">S.<br>No.</th>
+                    <th style="width: 30%">Title</th>
+                    <th style="width: 10%">Type</th>
+                    <th style="width: 10%">Year</th>
+                    <th style="width: 15%">Report in PDF</th>
+                    <th style="width: 15%">Tables in Excel</th>
+                    <th style="width: 5%">Performa</th>
+                    <th style="width: 5%">Instruction Manual</th>
+                    <th style="width: 5%">Links</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <!-- Data injected via JS -->
+                </tbody>
+              </table>
+
+              <div class="pagination-container">
+                <div class="pages-label">Pages</div>
+                <div class="pagination" id="paginationControls">
+                  <!-- Pagination injected via JS -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-md-3">
+            <div class="page-sidebar">
+              <h3>Statistics</h3>
+              <ul>
+                <li><a href="/statistics-new?category=School Education">School Education</a></li>
+                <li><a href="/statistics-new?category=Higher Education">Higher Education</a></li>
+                <li><a href="/statistics-new?category=Expenditure on Education">Expenditure on Education</a></li>
+                <li><a href="/statistics-new?category=Miscellaneous">Miscellaneous</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script>
+        const subcategories = {
+          'Expenditure on Education': ['Budgeted Expenditure on Education'],
+          'Miscellaneous': ['Population Projection in 6-23 years of age group'],
+          'School Education': ['UDISE+ Reports', 'Examinations'],
+          'Higher Education': ['AISHE Report']
+        };
+
+        const allData = [
+          // Expenditure
+          { id: 1, title: 'Analysis of Budgeted Expenditure on Education (2021-2023)', type: 'Final', year: '2021 to 2023', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 2, title: 'Analysis of Budgeted Expenditure on Education (2020-2022)', type: 'Final', year: '2020 to 2022', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 3, title: 'Analysis of Budgeted Expenditure on Education (2019-2021)', type: 'Final', year: '2019 to 2021', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 4, title: 'Analysis of Budgeted Expenditure on Education (2018-2020)', type: 'Final', year: '2018 to 2020', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 5, title: 'Analysis of Budgeted Expenditure on Education (2017-2019)', type: 'Final', year: '2017 to 2019', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 6, title: 'Analysis of Budgeted Expenditure on Education (2016-2018)', type: 'Final', year: '2016 to 2018', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 7, title: 'Analysis of Budgeted Expenditure on Education (2013-2016)', type: 'Final', year: '2013 to 2016', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 8, title: 'Statement indicating public expenditure on education - 2013', type: 'Final', year: '2013', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 9, title: 'Statement indicating public expenditure on education - 2012', type: 'Final', year: '2012', category: 'Expenditure on Education', subcat: 'Budgeted Expenditure on Education', pdf: true, excel: 0, perf: false, manual: false, links: false },
+
+          // School Education
+          { id: 10, title: 'UDISE+ Report 2024-25 - Existing Structure', type: 'Final', year: '- NA -', category: 'School Education', subcat: 'UDISE+ Reports', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 11, title: 'UDISE+ Report 2024-25 - NEP Structure', type: 'Final', year: '- NA -', category: 'School Education', subcat: 'UDISE+ Reports', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 12, title: 'Results of Secondary and Higher Secondary Examinations - 2024', type: 'Final', year: '2024', category: 'School Education', subcat: 'Examinations', pdf: true, excel: 2, perf: false, manual: false, links: false },
+          { id: 13, title: 'PGI for Districts Report 2022-2023 & 2023-2024', type: 'Final', year: '2022 to 2024', category: 'School Education', subcat: 'UDISE+ Reports', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 14, title: 'PGI for States/UTs Report 2022-2023 & 2023-2024', type: 'Final', year: '2022 to 2024', category: 'School Education', subcat: 'UDISE+ Reports', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 15, title: 'UDISE+ Report 2023-24 - Existing Structure', type: 'Final', year: '- NA -', category: 'School Education', subcat: 'UDISE+ Reports', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 16, title: 'UDISE+ Report 2023-24 - NEP Structure', type: 'Final', year: '- NA -', category: 'School Education', subcat: 'UDISE+ Reports', pdf: true, excel: 0, perf: false, manual: false, links: false },
+
+          // Miscellaneous
+          { id: 17, title: 'Population Projection - 2022', type: 'Projection', year: '2022 to 2023', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 18, title: 'Population Projection in 6-23 years of age group - 2020', type: 'Projection', year: '2011 to 2021', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: false, excel: 1, perf: false, manual: false, links: false },
+          { id: 19, title: 'Population Projection in 6-23 years of age group - 2016', type: 'Projection', year: '2016', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 1, perf: false, manual: true, links: false },
+          { id: 20, title: 'Population Projection in 6-23 years of age group - 2015', type: 'Projection', year: '2015', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 1, perf: false, manual: true, links: false },
+          { id: 21, title: 'Population Projection in 6-23 years of age group - 2014', type: 'Provisional', year: '2014', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 1, perf: false, manual: true, links: false },
+          { id: 22, title: 'Population Projection in 6-23 years of age group - 2013', type: 'Provisional', year: '2013', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 1, perf: false, manual: true, links: false },
+          { id: 23, title: 'Population Projection in 6-23 years of age group - 2012', type: 'Provisional', year: '2012', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 1, perf: false, manual: true, links: false },
+          { id: 24, title: 'Population Projection in 6-23 years of age group - 2011', type: 'Actual', year: '2011', category: 'Miscellaneous', subcat: 'Population Projection in 6-23 years of age group', pdf: true, excel: 1, perf: false, manual: false, links: false },
+          
+          // Higher Education
+          { id: 25, title: 'AISHE Report 2021-22', type: 'Final', year: '2021 to 2022', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 26, title: 'AISHE Report 2020-21', type: 'Final', year: '2020 to 2021', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 27, title: 'AISHE Report 2019-20 (English)', type: 'Final', year: '2019 to 2020', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 28, title: 'AISHE Report 2019-20 (Hindi)', type: 'Final', year: '2019 to 2020', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 29, title: 'AISHE Report 2018-19', type: 'Final', year: '2018 to 2019', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 30, title: 'AISHE Report 2017-18', type: 'Final', year: '2017 to 2018', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 31, title: 'AISHE Report 2016-17', type: 'Final', year: '2016 to 2017', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 0, perf: false, manual: false, links: false },
+          { id: 32, title: 'AISHE Report 2015-16', type: 'Final', year: '2015 to 2016', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 1, perf: false, manual: false, links: false },
+          { id: 33, title: 'AISHE Report 2014-15', type: 'Final', year: '2014 to 2015', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 1, perf: false, manual: false, links: false },
+          { id: 34, title: 'AISHE Report 2013-14', type: 'Final', year: '2013 to 2014', category: 'Higher Education', subcat: 'AISHE Report', pdf: true, excel: 1, perf: false, manual: false, links: false }
+        ];
+
+        let filteredData = [...allData];
+        let currentPage = 1;
+        const itemsPerPage = 10;
+
+        function updateSubcategoryOptions() {
+          const cat = document.getElementById('categorySelect').value;
+          const subcatSelect = document.getElementById('subcategorySelect');
+
+          subcatSelect.innerHTML = '<option value="Any">- Any -</option>';
+
+          if (cat !== 'Any' && subcategories[cat]) {
+            subcatSelect.style.display = 'inline-block';
+            subcategories[cat].forEach(sub => {
+              subcatSelect.innerHTML += `<option value="${sub}">${sub}</option>`;
+            });
+          } else {
+            subcatSelect.style.display = 'none';
+          }
+        }
+
+        function renderTable() {
+          const tbody = document.getElementById('tableBody');
+          tbody.innerHTML = '';
+
+          if (filteredData.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align: center;">No statistics found.</td></tr>';
+            renderPagination();
+            return;
+          }
+
+          const startIndex = (currentPage - 1) * itemsPerPage;
+          const endIndex = Math.min(startIndex + itemsPerPage, filteredData.length);
+
+          let count = startIndex + 1;
+          for (let i = startIndex; i < endIndex; i++) {
+            const item = filteredData[i];
+
+            let pdfHtml = item.pdf ? `<a href="#" class="pdf-link"><i class="bi bi-file-earmark-pdf pdf-icon"></i> Download</a>` : `<span class="na-text">- NA -</span>`;
+
+            let excelHtml = `<span class="na-text">- NA -</span>`;
+            if (item.excel === 1) {
+              excelHtml = `<a href="#" class="excel-link"><i class="bi bi-file-earmark-excel excel-icon"></i> Download</a>`;
+            } else if (item.excel === 2) {
+              excelHtml = `<a href="#" class="excel-link"><i class="bi bi-file-earmark-excel excel-icon"></i> Download</a><br><a href="#" class="excel-link"><i class="bi bi-file-earmark-excel excel-icon"></i> Download</a>`;
+            }
+
+            let manualHtml = item.manual ? `<a href="#" class="pdf-link"><i class="bi bi-file-earmark-pdf pdf-icon"></i> Download</a>` : `<span class="na-text">- NA -</span>`;
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+          <td>${count++}</td>
+          <td>${item.title}</td>
+          <td>${item.type}</td>
+          <td>${item.year}</td>
+          <td>${pdfHtml}</td>
+          <td>${excelHtml}</td>
+          <td><span class="na-text">- NA -</span></td>
+          <td>${manualHtml}</td>
+          <td><span class="na-text">- NA -</span></td>
+        `;
+            tbody.appendChild(tr);
+          }
+          
+          renderPagination();
+        }
+
+        function renderPagination() {
+          const paginationContainer = document.getElementById('paginationControls');
+          if(!paginationContainer) return;
+          paginationContainer.innerHTML = '';
+
+          const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+          
+          if (totalPages <= 1) return; // No pagination needed
+
+          // "first" and "previous"
+          if (currentPage > 1) {
+            paginationContainer.innerHTML += `<a onclick="goToPage(1)">1</a>`;
+            paginationContainer.innerHTML += `<a onclick="goToPage(${currentPage - 1})">‹ previous</a>`;
+          } else {
+             paginationContainer.innerHTML += `<a class="active">1</a>`;
+          }
+
+          // Page numbers (if we had more pages, we'd loop, but simple for now based on UI)
+          for (let i = 2; i <= totalPages; i++) {
+            if (i === currentPage) {
+              paginationContainer.innerHTML += `<a class="active">${i}</a>`;
+            } else {
+              paginationContainer.innerHTML += `<a onclick="goToPage(${i})">${i}</a>`;
+            }
+          }
+
+          // "next" and "last"
+          if (currentPage < totalPages) {
+            paginationContainer.innerHTML += `<a onclick="goToPage(${currentPage + 1})">next ›</a>`;
+            paginationContainer.innerHTML += `<a onclick="goToPage(${totalPages})">last »</a>`;
+          } else {
+             paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">next ›</a>`;
+             paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">last »</a>`;
+          }
+        }
+
+        function goToPage(page) {
+          currentPage = page;
+          renderTable();
+        }
+
+        function applyFilter() {
+          const cat = document.getElementById('categorySelect').value;
+          const subcat = document.getElementById('subcategorySelect').value;
+
+          filteredData = allData.filter(item => {
+            const catMatch = cat === 'Any' || item.category === cat;
+            const subcatMatch = subcat === 'Any' || item.subcat === subcat;
+            return catMatch && subcatMatch;
+          });
+
+          currentPage = 1;
+          renderTable();
+        }
+
+        window.onload = () => {
+          // Check query params for pre-filter
+          const urlParams = new URLSearchParams(window.location.search);
+          const categoryParam = urlParams.get('category');
+
+          if (categoryParam) {
+            const catSelect = document.getElementById('categorySelect');
+            // check if option exists
+            for (let i = 0; i < catSelect.options.length; i++) {
+              if (catSelect.options[i].value === categoryParam) {
+                catSelect.selectedIndex = i;
+                updateSubcategoryOptions();
+                break;
+              }
+            }
+          }
+
+          applyFilter();
+        };
+      </script>
+</body>
+
+</html>

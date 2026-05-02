@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documents & Reports | Ministry of Education</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .page-banner {
+     background:url(/img/about/inner-header-bg.gif);
+
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 15px 80px;
+      text-align: center;
+      margin-bottom: 0px;
+      align-items: center;
+    }
+
+    .page-banner h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    .page-banner-img {
+      height: 40px;
+    }
+
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .page-content {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .page-main {
+      background: white;
+      padding: 20px;
+    }
+
+    /* Filter Form */
+    .filter-section {
+      background: #fff;
+      padding: 0 0 15px 0;
+      margin-bottom: 20px;
+    }
+
+    .filter-controls {
+      display: flex;
+      align-items: flex-end;
+      gap: 15px;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .filter-group label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .filter-group select,
+    .filter-group input {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 200px;
+    }
+
+    .filter-controls button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 6px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      height: 34px;
+    }
+
+    .filter-controls button:hover {
+      background-color: #002244;
+    }
+
+    /* Table */
+    .docs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .docs-table th,
+    .docs-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .docs-table th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .docs-table tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    .docs-table tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .pdf-link {
+      color: #0066cc;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pdf-link:hover {
+      text-decoration: underline;
+    }
+
+    .pdf-icon {
+      color: #d9534f;
+      font-size: 1.2em;
+    }
+
+    /* Pagination */
+    .pagination-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .pages-label {
+      font-size: 1.5em;
+      color: #555;
+    }
+
+    .pagination {
+      margin: 0;
+    }
+
+    .pagination a {
+      color: #0066cc;
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      margin: 0 2px;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .pagination a.active {
+      background-color: #f5f5f5;
+      color: #333;
+      border-color: #ccc;
+    }
+
+    .pagination a:hover:not(.active) {
+      background-color: #eee;
+    }
+
+    /* Sidebar */
+    .page-sidebar {
+      background: #f5f5f5;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+    }
+
+    .page-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px 15px;
+      margin: -15px 0 15px 0;
+      font-size: 1.1em;
+    }
+
+    .page-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page-sidebar li {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .page-sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .page-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      padding: 8px 15px;
+    }
+
+    .page-sidebar a:hover {
+      color: #0066cc;
+      background-color: #ebebeb;
+    }
+
+    .page-sidebar a:before {
+      content: "▶";
+      margin-right: 8px;
+      font-size: 0.6em;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
+
+  <div class="page-banner">
+    <h1>Documents & Reports</h1>
+    <img src="/img/about/banner-right.jpg" alt="Banner" class="page-banner-img">
+  </div>
+
+  <div class="breadcrumb-container">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/documents_reports">Documents & Reports</a></li>
+        <li class="active">Documents & Reports</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="container">
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-9">
+          <div class="page-main">
+            
+            <div class="filter-section">
+              <div class="filter-controls">
+                <div class="filter-group">
+                  <label for="departmentSelect">Select Department</label>
+                  <select id="departmentSelect">
+                    <option value="All">- All -</option>
+                    <option value="General">General</option>
+                    <option value="Autonomous Bodies - SE&L">Autonomous Bodies - SE&L</option>
+                    <option value="Autonomous Bodies - HE">Autonomous Bodies - HE</option>
+                    <option value="Dept. of School Education & Literacy">Dept. of School Education & Literacy</option>
+                    <option value="Dept. of Higher Education">Dept. of Higher Education</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="titleInput">Title</label>
+                  <input type="text" id="titleInput" placeholder="">
+                </div>
+                <button onclick="applyFilter()">Apply</button>
+              </div>
+            </div>
+
+            <table class="docs-table" id="docsTable">
+              <thead>
+                <tr>
+                  <th style="width: 5%">S.No.</th>
+                  <th style="width: 40%">Title</th>
+                  <th style="width: 20%">Report In PDF</th>
+                  <th style="width: 15%">External Link</th>
+                  <th style="width: 20%">Category</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <!-- Data will be injected here via JS -->
+              </tbody>
+            </table>
+
+            <div class="pagination-container">
+              <div class="pages-label">Pages</div>
+              <div class="pagination" id="paginationControls">
+                <!-- Pagination will be injected here via JS -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+          <div class="page-sidebar">
+            <h3>Documents & Reports</h3>
+            <ul>
+              <li><a href="#">Annual Report</a></li>
+              <li><a href="#">Annual Accounts</a></li>
+              <li><a href="#">Detailed Demand for Grants</a></li>
+              <li><a href="#">Outcome Budget</a></li>
+              <li><a href="#">Quarterly Actuals Expenditure</a></li>
+              <li><a href="#">Central Advisory Board of Education</a></li>
+              <li><a href="#">Citizen's / Client's Charter</a></li>
+              <li><a href="#">Committee Reports</a></li>
+              <li><a href="#">Delivery Monitoring Unit Report</a></li>
+              <li><a href="#">Schemes Guidelines</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Plan Document</a></li>
+              <li><a href="#">Policy</a></li>
+              <li><a href="#">Request for Proposal (RFP)</a></li>
+              <li><a href="#">Results Framework Documents</a></li>
+              <li><a href="#">Report to the People on Education</a></li>
+              <li><a href="#">RTI Reports</a></li>
+              <li><a href="#">State Ministers'/Secretaries Conference</a></li>
+              <li><a href="#">National Achievement Survey (NAS) Class III Report</a></li>
+              <li><a href="#">Miscellaneous</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script>
+    const allData = [
+      { id: 1, title: 'Annual Report 2024-2025 - MoE (English)', size: '67.19 KB', category: 'General' },
+      { id: 2, title: 'Annual Report 2024-2025 - MoE (Hindi)', size: '67.19 KB', category: 'General' },
+      { id: 3, title: 'Annual Report 2023-24 - NCERT (English)', size: '15.21 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 4, title: 'Annual Report 2023-24 - NCERT (Hindi)', size: '12.94 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 5, title: 'Annual Report 2022-23 - NCERT (English)', size: '18.76 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 6, title: 'Annual Report 2022-23 - NCERT (Hindi)', size: '14.18 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 7, title: 'Annual Report 2023-2024 - MoE (Hindi)', size: '12.46 MB', category: 'General' },
+      { id: 8, title: 'Annual Report 2023-2024 - MoE (English)', size: '13.01 MB', category: 'General' },
+      { id: 9, title: 'Annual Report 2022-2023 - MoE (English)', size: '13.19 MB', category: 'General' },
+      { id: 10, title: 'Annual Report 2022-2023 - MoE (Hindi)', size: '12.58 MB', category: 'General' },
+      { id: 11, title: 'Annual Report 2021-2022 - MoE (English)', size: '10.5 MB', category: 'General' },
+      { id: 12, title: 'Annual Report 2021-2022 - MoE (Hindi)', size: '11.2 MB', category: 'General' },
+      { id: 13, title: 'Annual Report 2020-2021 - MoE (English)', size: '15.1 MB', category: 'General' },
+      { id: 14, title: 'Annual Report 2020-2021 - MoE (Hindi)', size: '14.3 MB', category: 'General' },
+      { id: 15, title: 'Annual Report 2019-2020 - MoE (English)', size: '9.8 MB', category: 'General' },
+      { id: 16, title: 'Annual Report 2019-2020 - MoE (Hindi)', size: '8.9 MB', category: 'General' },
+      { id: 17, title: 'Annual Report 2021-22 - NCERT (English)', size: '12.1 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 18, title: 'Annual Report 2021-22 - NCERT (Hindi)', size: '13.2 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 19, title: 'Annual Report 2020-21 - NCERT (English)', size: '14.5 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 20, title: 'Annual Report 2020-21 - NCERT (Hindi)', size: '15.6 MB', category: 'Autonomous Bodies - SE&L' },
+      { id: 21, title: 'Annual Report 2018-2019 (LS) - NIEPA', size: '6.39 MB', category: 'Autonomous Bodies - HE' },
+      { id: 22, title: 'Annual Report 2018-2019 (RS) - NIEPA', size: '6.39 MB', category: 'Autonomous Bodies - HE' },
+      { id: 23, title: 'Annual Report 2017-2018 - NIEPA', size: '5.68 MB', category: 'Autonomous Bodies - HE' },
+      { id: 24, title: 'Annual Report 2016-2017 - NIEPA', size: '11.2 MB', category: 'Autonomous Bodies - HE' },
+      { id: 25, title: 'Annual Report 2017-2018 - MHRD (English)', size: '7.33 MB', category: 'General' },
+      { id: 26, title: 'Annual Report 2017-2018 - MHRD (Hindi)', size: '16.61 MB', category: 'General' },
+      { id: 27, title: 'Annual Report 2016-2017 - MoE', size: '6.83 MB', category: 'General' },
+      { id: 28, title: 'Annual Report 2016-2017', size: '6.83 MB', category: 'Dept. of School Education & Literacy' },
+      { id: 29, title: 'Annual Report 2016-2017', size: '6.83 MB', category: 'Dept. of Higher Education' },
+      { id: 30, title: 'Annual Report 2016-17 - Navodaya Vidyalaya Samiti', size: '834.53 KB', category: 'Autonomous Bodies - SE&L' }
+    ];
+
+    let filteredData = [...allData];
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    function renderTable() {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+
+      if (filteredData.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">No documents found.</td></tr>';
+        renderPagination();
+        return;
+      }
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = Math.min(startIndex + itemsPerPage, filteredData.length);
+
+      for (let i = startIndex; i < endIndex; i++) {
+        const item = filteredData[i];
+        const tr = document.createElement('tr');
+        
+        tr.innerHTML = `
+          <td>${item.id}</td>
+          <td>${item.title}</td>
+          <td>
+            <a href="#" class="pdf-link">
+              <i class="bi bi-file-earmark-pdf pdf-icon"></i>
+              Download - (${item.size})
+            </a>
+          </td>
+          <td>- NA -</td>
+          <td>${item.category}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+
+      renderPagination();
+    }
+
+    function renderPagination() {
+      const paginationContainer = document.getElementById('paginationControls');
+      paginationContainer.innerHTML = '';
+
+      const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+      
+      if (totalPages <= 1) return; // No pagination needed
+
+      // "first" and "previous"
+      if (currentPage > 1) {
+        paginationContainer.innerHTML += `<a onclick="goToPage(1)">« first</a>`;
+        paginationContainer.innerHTML += `<a onclick="goToPage(${currentPage - 1})">‹ previous</a>`;
+      } else {
+         paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">« first</a>`;
+         paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">‹ previous</a>`;
+      }
+
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        if (i === currentPage) {
+          paginationContainer.innerHTML += `<a class="active">${i}</a>`;
+        } else {
+          paginationContainer.innerHTML += `<a onclick="goToPage(${i})">${i}</a>`;
+        }
+      }
+
+      // "next" and "last"
+      if (currentPage < totalPages) {
+        paginationContainer.innerHTML += `<a onclick="goToPage(${currentPage + 1})">next ›</a>`;
+        paginationContainer.innerHTML += `<a onclick="goToPage(${totalPages})">last »</a>`;
+      } else {
+         paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">next ›</a>`;
+         paginationContainer.innerHTML += `<a style="color:#999; cursor:default;">last »</a>`;
+      }
+    }
+
+    function goToPage(page) {
+      currentPage = page;
+      renderTable();
+    }
+
+    function applyFilter() {
+      const selectedDept = document.getElementById('departmentSelect').value;
+      const titleSearch = document.getElementById('titleInput').value.toLowerCase();
+      
+      filteredData = allData.filter(item => {
+        const deptMatch = selectedDept === 'All' || item.category === selectedDept;
+        const titleMatch = titleSearch === '' || item.title.toLowerCase().includes(titleSearch);
+        return deptMatch && titleMatch;
+      });
+      
+      currentPage = 1; // Reset to first page
+      renderTable();
+    }
+
+    // Initial render
+    window.onload = () => {
+      renderTable();
+    };
+  </script>
+</body>
+
+</html>

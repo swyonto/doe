@@ -53,6 +53,38 @@ app.get("/minister-page", (req, res) => {
   res.render("pages/ministers.ejs");
 }
 )
+app.get("/documents_reports", (req, res) => {
+  res.render("pages/documents_reports.ejs");
+}
+)
+app.get("/statistics-new", (req, res) => {
+  res.render("pages/statistics-new.ejs");
+}
+)
+app.get("/institutions", (req, res) => {
+  res.render("pages/institutions.ejs");
+})
+app.get("/apex-level-bodies", (req, res) => {
+  res.render("pages/apex-level-bodies.ejs");
+})
+app.get("/national-boards", (req, res) => {
+  res.render("pages/national-boards.ejs");
+})
+app.get("/private-national-boards", (req, res) => {
+  res.render("pages/private-national-boards.ejs");
+})
+app.get("/international-boards", (req, res) => {
+  res.render("pages/international-boards.ejs");
+})
+app.get("/audios", (req, res) => {
+  res.render("pages/audios.ejs");
+})
+app.get("/gallery", (req, res) => {
+  res.render("pages/gallery.ejs");
+})
+app.get("/rti", (req, res) => {
+  res.render("pages/rti.ejs");
+})
 app.get("/NEP-2020", (req, res) => {
   res.sendFile(path.join(__dirname, "public/pdf/PM Shri Schools Scheme Data.pdf"))
 })
@@ -62,6 +94,10 @@ app.get("/telephone-directory-kb-2", (req, res) => {
 app.get("/telephone-directory-moe", (req, res) => {
   res.sendFile(path.join(__dirname, "public/pdf/telephone-directory-moe2.pdf"))
 })
+app.use((req, res) => {
+  res.status(404).render("pages/404.ejs");
+})
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("http://localhost:" + process.env.PORT)
 })

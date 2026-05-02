@@ -75,7 +75,8 @@ a{
     text-decoration: none;
     color: yellow;
     display: flex;
-    animation: scroll-left 25s linear infinite;
+    width: max-content;
+    animation: scroll-left 12s linear infinite;
     white-space: nowrap;
 }
 
@@ -141,9 +142,9 @@ a{
     min-height: 80px;
   
 display: flex;
-justify-content:space-between;
 align-items: center;
-padding: 10px 40px ;
+justify-content: space-between;
+    padding: 10px 40px;
 
 .imgContainer{
     width: 80px;
@@ -165,7 +166,7 @@ padding: 10px 40px ;
     margin-right: 29px;
    }
 &:hover{
-    max-width: 100%;
+    max-width: 250px;
     
 }
 input{
@@ -190,8 +191,9 @@ input{
     }
 
     /* Each slide takes exactly the full width of .hero */
-    .slide {
-  min-width: 100%;                 /* each slide = 100% of container width */
+    .slides-track .slide {
+  flex: 0 0 100%;
+  width: 100%;
   height: 380px;
   display: flex;
   align-items: center;
@@ -200,6 +202,7 @@ input{
   overflow: hidden;
    img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     }
     }

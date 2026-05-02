@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private National Boards | Ministry of Education</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .page-banner {
+      background: url(/img/about/inner-header-bg.gif);
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 15px 80px;
+      text-align: center;
+      margin-bottom: 0px;
+      align-items: center;
+    }
+
+    .page-banner h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    .page-banner-img {
+      height: 40px;
+    }
+
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .page-content {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .page-main {
+      background: white;
+      padding: 20px;
+    }
+
+    .page-title {
+      font-size: 1.6em;
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    /* Table */
+    .inst-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    .inst-table th,
+    .inst-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .inst-table th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .inst-table td {
+      vertical-align: top;
+    }
+
+    .inst-table tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    /* Sidebar */
+    .page-sidebar {
+      background: #f5f5f5;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+    }
+
+    .page-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px 15px;
+      margin: -15px 0 15px 0;
+      font-size: 1.1em;
+    }
+
+    .page-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page-sidebar li {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .page-sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .page-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      padding: 8px 15px;
+    }
+
+    .page-sidebar a:hover {
+      color: #0066cc;
+      background-color: #ebebeb;
+    }
+
+    .page-sidebar a:before {
+      content: "▶";
+      margin-right: 8px;
+      font-size: 0.6em;
+      color: #888;
+    }
+
+    .last-updated {
+      text-align: right;
+      font-size: 11px;
+      color: #888;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
+
+  <div class="page-banner">
+    <h1>Boards</h1>
+    <img src="/img/about/banner-right.jpg" alt="Banner" class="page-banner-img">
+  </div>
+
+  <div class="breadcrumb-container">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Boards</a></li>
+        <li><a href="#">Private National Boards</a></li>
+        <li class="active">Boards</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="container">
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-9">
+          <div class="page-main">
+            
+            <h2 class="page-title">Private National Boards</h2>
+
+            <table class="inst-table">
+              <thead>
+                <tr>
+                  <th style="width: 5%">S.No.</th>
+                  <th style="width: 30%">Name of recognized Education Board</th>
+                  <th style="width: 65%">Relevant Acts/Executive orders</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Council for the Indian School Certificate Examination (CISCE)</td>
+                  <td>The Council for the Indian School Certificate Examination (CISCE) has been mentioned in Delhi School Education Act 1973 as a body conducting Public Examination in NCT of Delhi. For functioning out of NCT of Delhi, CISCE has taken / has to take approval / NOC from the concerned State/UT Government for functioning in their jurisdiction.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="last-updated">
+              Last Updated by admin on Friday, 3 February 2023 - 5:47pm
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+          <div class="page-sidebar">
+            <h3>Boards</h3>
+            <ul>
+              <li><a href="/national-boards">National Boards</a></li>
+              <li><a href="/private-national-boards">Private National Boards</a></li>
+              <li><a href="/international-boards">International National Boards</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

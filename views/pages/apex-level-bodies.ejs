@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Level Bodies | Ministry of Education</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .page-banner {
+      background: url(/img/about/inner-header-bg.gif);
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 15px 80px;
+      text-align: center;
+      margin-bottom: 0px;
+      align-items: center;
+    }
+
+    .page-banner h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    .page-banner-img {
+      height: 40px;
+    }
+
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .page-content {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .page-main {
+      background: white;
+      padding: 20px;
+    }
+
+    .page-title {
+      font-size: 1.6em;
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    /* Table */
+    .inst-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    .inst-table th,
+    .inst-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .inst-table th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .inst-table td {
+      vertical-align: top;
+    }
+
+    .inst-table tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    .website-link {
+      color: #0066cc;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .website-link:hover {
+      text-decoration: underline;
+    }
+
+    .external-icon {
+      font-size: 0.8em;
+      margin-left: 3px;
+      color: #888;
+    }
+
+    /* Sidebar */
+    .page-sidebar {
+      background: #f5f5f5;
+      padding: 15px 0;
+      border: 1px solid #ddd;
+    }
+
+    .page-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px 15px;
+      margin: -15px 0 15px 0;
+      font-size: 1.1em;
+    }
+
+    .page-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page-sidebar li {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .page-sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .page-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      padding: 8px 15px;
+    }
+
+    .page-sidebar a:hover {
+      color: #0066cc;
+      background-color: #ebebeb;
+    }
+
+    .page-sidebar a:before {
+      content: "▶";
+      margin-right: 8px;
+      font-size: 0.6em;
+      color: #888;
+    }
+
+    .last-updated {
+      text-align: right;
+      font-size: 11px;
+      color: #888;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
+
+  <div class="page-banner">
+    <h1>Apex Level Bodies</h1>
+    <img src="/img/about/banner-right.jpg" alt="Banner" class="page-banner-img">
+  </div>
+
+  <div class="breadcrumb-container">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/apex-level-bodies">Institutions</a></li>
+        <li><a href="#">Higher Education</a></li>
+        <li class="active">Apex Level Bodies</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="container">
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-9">
+          <div class="page-main">
+            
+            <h2 class="page-title">Apex Level Bodies</h2>
+
+            <table class="inst-table">
+              <thead>
+                <tr>
+                  <th style="width: 5%">S.No.</th>
+                  <th style="width: 60%">Name of the Organisation</th>
+                  <th style="width: 35%">Website</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>All India Council of Technical Education (AICTE)<br>Nelson Mandela Marg, Vasant Kunj, New Delhi - 110070</td>
+                  <td><a href="http://www.aicte-india.org/" class="website-link" target="_blank">http://www.aicte-india.org/<i class="bi bi-box-arrow-up-right external-icon"></i></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Council of Architecture (COA)<br>India Habitat Centre, Core-6-A, 1st Floor, Lodhi Road, New Delhi - 110 003</td>
+                  <td><a href="http://www.coa.gov.in/" class="website-link" target="_blank">http://www.coa.gov.in/<i class="bi bi-box-arrow-up-right external-icon"></i></a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Indian Council of Historical Research (ICHR)<br>35-Ferozeshah Road, New Delhi - 110001</td>
+                  <td><a href="http://ichr.ac.in" class="website-link" target="_blank">http://ichr.ac.in<i class="bi bi-box-arrow-up-right external-icon"></i></a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Indian Council of Philosophical Research (ICPR)<br>36,Tughlakabad Institutional Area, Near Batra Hospital,Tughlakabad, New Delhi - 110062</td>
+                  <td><a href="http://icpr.in/" class="website-link" target="_blank">http://icpr.in/<i class="bi bi-box-arrow-up-right external-icon"></i></a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Indian Council of Social Science Research (ICSSR)<br>Post Box No. 10528, Aruna Asaf Ali Marg, New Delhi - 110067</td>
+                  <td><a href="http://icssr.org/" class="website-link" target="_blank">http://icssr.org/<i class="bi bi-box-arrow-up-right external-icon"></i></a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>University Grants Commission (UGC)<br>Bahadur Shah Zafar Marg, New Delhi - 110002</td>
+                  <td><a href="http://www.ugc.ac.in/" class="website-link" target="_blank">http://www.ugc.ac.in/<i class="bi bi-box-arrow-up-right external-icon"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="last-updated">
+              Last Updated by admin on Thursday, 17 January 2019 - 12:43pm
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+          <div class="page-sidebar">
+            <h3>Institutions</h3>
+            <ul>
+              <li><a href="/institutions">School Education & Literacy</a></li>
+              <li>
+                <a href="/apex-level-bodies">Higher Education</a>
+                <ul style="padding-left: 15px; margin-bottom: 10px; border-bottom: none;">
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="/apex-level-bodies">Apex Level Bodies</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">Boards of Apprenticeship Training</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">Book Promotion</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">Central Universities</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">IIMs</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">IISc. Bangalore & IISERs</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">IITs</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">IIITs</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">Institutions of National Importance</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">Institutions related to Hindi and other Indian Languages</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">Languages</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">NITs</a></li>
+                  <li style="border-bottom: none; padding-top: 5px; padding-bottom: 0;"><a href="#">NITTTRs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
