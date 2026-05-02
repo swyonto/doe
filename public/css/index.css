@@ -405,8 +405,15 @@ input{
     font-size: 1.3rem;
     }
     .signature{
-    text-align: right;
-    margin-right: 120px ;
+    width: 150px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: 120px;
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
     }
 
 

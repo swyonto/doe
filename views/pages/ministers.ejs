@@ -13,7 +13,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     .page-banner {
-      background: #005073;
+      background: url(/img/about/inner-header-bg.gif);
+
       background-position: center;
       display: flex;
       justify-content: space-between;
@@ -29,7 +30,7 @@
       font-size: 1.4em;
       font-weight: 500;
     }
-    
+
     .page-banner-img {
       height: 40px;
     }
@@ -66,43 +67,43 @@
     /* Ministers Grid */
     .minister-card {
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 5 px;
     }
-    
+
     .minister-img-container {
       display: inline-block;
-      padding: 3px;
+      padding: 5px;
       border: 1px solid #ddd;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .minister-img-container img {
-      width: 60px;
-      height: 75px;
+      width: 50px;
+
       object-fit: cover;
     }
 
     .minister-name {
       font-weight: bold;
       color: #333;
-      margin-bottom: 3px;
-      font-size: 13px;
+      margin-bottom: 5px;
+      font-size: 14px;
     }
 
     .minister-title {
       color: #666;
-      font-size: 12px;
+      font-size: 13px;
       margin-bottom: 2px;
     }
 
     .minister-gov {
       color: #888;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     .divider {
       border-top: 1px dotted #ccc;
-      margin: 5px 0;
+      margin: 30px 0;
     }
 
     /* Sidebar */
@@ -166,100 +167,100 @@
 <body>
   <%- include('../partials/nav') %>
 
-  <div class="page-banner">
-    <h1>Ministers</h1>
-    <img src="/img/about/banner-right.jpg" alt="Parliament" class="page-banner-img">
-  </div>
-
-  <div class="breadcrumb-container">
-    <div class="container">
-      <ol class="breadcrumb">
-        <li><a href="/">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="/minister-page">Who's Who</a></li>
-        <li class="active">Ministers</li>
-      </ol>
+    <div class="page-banner">
+      <h1>Ministers</h1>
+      <img src="/img/about/banner-right.jpg" alt="Parliament" class="page-banner-img">
     </div>
-  </div>
 
-  <div class="page-content">
-    <div class="container">
-      <div class="row">
-        <!-- Main Content -->
-        <div class="col-md-9">
-          <div class="page-main">
-            
-            <!-- Top Minister -->
-            <div class="row">
-              <div class="col-md-12">
-                <div class="minister-card">
-                  <div class="minister-img-container">
-                    <img src="https://www.education.gov.in/sites/education.gov.in/themes/nexus/images/whoswho/rpn_whoswho.jpg" alt="Shri Dharmendra Pradhan">
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="/minister-page">Who's Who</a></li>
+          <li class="active">Ministers</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="container">
+        <div class="row">
+          <!-- Main Content -->
+          <div class="col-md-9">
+            <div class="page-main">
+
+              <!-- Top Minister -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="minister-card">
+                    <div class="minister-img-container">
+                      <img src="/img/rpn_whoswho.jpg" alt="Shri Dharmendra Pradhan">
+                    </div>
+                    <div class="minister-name">Shri Dharmendra Pradhan</div>
+                    <div class="minister-title">Minister of Education</div>
+                    <div class="minister-gov">Government of India</div>
                   </div>
-                  <div class="minister-name">Shri Dharmendra Pradhan</div>
-                  <div class="minister-title">Minister of Education</div>
-                  <div class="minister-gov">Government of India</div>
                 </div>
               </div>
-            </div>
 
-            <div class="divider"></div>
+              <div class="divider"></div>
 
-            <!-- Bottom Ministers -->
-            <div class="row">
-              <div class="col-md-6">
-                <div class="minister-card">
-                  <div class="minister-img-container">
-                    <img src="https://www.education.gov.in/sites/education.gov.in/themes/nexus/images/whoswho/Sukanta_Majumdar.jpg" alt="Dr. Sukanta Majumdar">
+              <!-- Bottom Ministers -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="minister-card">
+                    <div class="minister-img-container">
+                      <img src="/img/Sukanta_Majumdar.jpg" alt="Dr. Sukanta Majumdar">
+                    </div>
+                    <div class="minister-name">Dr. Sukanta Majumdar</div>
+                    <div class="minister-title">Minister of State for Education</div>
+                    <div class="minister-gov">Government of India</div>
                   </div>
-                  <div class="minister-name">Dr. Sukanta Majumdar</div>
-                  <div class="minister-title">Minister of State for Education</div>
-                  <div class="minister-gov">Government of India</div>
+                </div>
+                <div class="col-md-6">
+                  <div class="minister-card">
+                    <div class="minister-img-container">
+                      <img src="/img/Jayant_Chaudhary.jpg" alt="Shri Jayant Chaudhary">
+                    </div>
+                    <div class="minister-name">Shri Jayant Chaudhary</div>
+                    <div class="minister-title">Minister of State for Education</div>
+                    <div class="minister-gov">Government of India</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="minister-card">
-                  <div class="minister-img-container">
-                    <img src="https://www.education.gov.in/sites/education.gov.in/themes/nexus/images/whoswho/Jayant_Chaudhary.jpg" alt="Shri Jayant Chaudhary">
-                  </div>
-                  <div class="minister-name">Shri Jayant Chaudhary</div>
-                  <div class="minister-title">Minister of State for Education</div>
-                  <div class="minister-gov">Government of India</div>
-                </div>
+
+              <div class="last-updated">
+                Last Updated by admin on Tuesday, 11 June 2024 - 6:19pm
               </div>
-            </div>
 
-            <div class="last-updated">
-              Last Updated by admin on Tuesday, 11 June 2024 - 6:19pm
             </div>
-
           </div>
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-md-3">
-          <div class="page-sidebar">
-            <h3>Who is Who</h3>
-            <ul>
-              <li>
-                <a href="/minister-page">Ministers</a>
-                <ul style="padding-left: 15px; margin-top: 10px; border-bottom: none;">
-                   <li style="border-bottom: none; padding-bottom: 0;"><a href="#">Ministers Office</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Higher Education</a></li>
-              <li><a href="#">School Education & Literacy</a></li>
-            </ul>
+          <!-- Sidebar -->
+          <div class="col-md-3">
+            <div class="page-sidebar">
+              <h3>Who is Who</h3>
+              <ul>
+                <li>
+                  <a href="/minister-page">Ministers</a>
+                  <ul style="padding-left: 15px; margin-top: 10px; border-bottom: none;">
+                    <li style="border-bottom: none; padding-bottom: 0;"><a href="#">Ministers Office</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Higher Education</a></li>
+                <li><a href="#">School Education & Literacy</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
