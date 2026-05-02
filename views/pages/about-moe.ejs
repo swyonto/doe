@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About MoE | Ministry of Education | Government of India</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .about-banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/slide1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .about-banner h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .breadcrumb-container {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-bottom: 30px;
+    }
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+    .about-content {
+      padding: 0 20px;
+    }
+    .about-main {
+      background: white;
+      padding: 30px;
+      border-radius: 4px;
+    }
+    .about-sidebar {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 4px;
+    }
+    .about-sidebar h3 {
+      background: #666;
+      color: white;
+      padding: 10px;
+      margin: -20px -20px 20px -20px;
+      font-size: 1.1em;
+    }
+    .about-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .about-sidebar li {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+    .about-sidebar li:last-child {
+      border-bottom: none;
+    }
+    .about-sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .about-sidebar a:hover {
+      color: #0066cc;
+    }
+    .about-sidebar a:before {
+      content: "▶";
+      margin-right: 10px;
+      font-size: 0.8em;
+    }
+    .section-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .section-title:first-child {
+      margin-top: 0;
+    }
+    .section-content {
+      line-height: 1.8;
+      color: #555;
+      text-align: justify;
+    }
+    .section-content ul {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+    .section-content li {
+      margin-bottom: 10px;
+      list-style: disc;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
+
+  <div class="about-banner">
+    <h1>About MoE</h1>
+  </div>
+
+  <div class="breadcrumb-container">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-moe">About MoE</a></li>
+        <li class="active">About MoE</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <div class="container">
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-8">
+          <div class="about-main">
+            <div class="section-title">Overview</div>
+            <div class="section-content">
+              <p>Education plays a significant and remedial role in balancing the socio-economic fabric of the Country. Since citizens of India are its most valuable resource, our billion-strong nation needs the nurture and care in the form of basic education to achieve a better quality of life. This warrants an all-round development of our citizens, which can be achieved by building strong foundations in education. In pursuance of this mission, the Ministry of Education (MoE) was created on September 26, 1985, through the 174th amendment to the Government of India (Allocation of Business) Rules, 1961. Currently, the MoE works through two departments:</p>
+              <ul>
+                <li>Department of School Education & Literacy</li>
+                <li>Department of Higher Education</li>
+              </ul>
+              <p>While the Department of School Education & Literacy is responsible for development of school education and literacy in the country, the Department of Higher Education takes care of what is one of the largest Higher Education systems of the world, just after the United States and China.</p>
+              <p>The Dept of SE & L has its eyes set on the "universalisation of education" and making better citizens out of our young brigade. For this, various new schemes and initiatives are taken up regularly and recently, those schemes and initiatives have also started paying dividends in the form of growing enrolment in schools.</p>
+              <p>The Dept of HE, on the other hand, is engaged in bringing world class opportunities of higher education and research to the country so that Indian students are not finding lacking when facing an international platform. For this, the Government has launched joint ventures and signed MoUs to help the Indian student benefit from the world opinion.</p>
+            </div>
+
+            <div class="section-title">Objectives</div>
+            <div class="section-content">
+              <p>The main objectives of the Ministry would be:</p>
+              <ul>
+                <li>Formulating the National Policy on Education and to ensure that it is implemented in letter and spirit</li>
+                <li>Planned development, including expanding access and improving quality of the educational institutions throughout the country, including in the regions where people do not have easy access to education.</li>
+                <li>Paying special attention to disadvantaged groups like the poor, females and the minorities</li>
+                <li>Provide financial help in the form of scholarships, loan subsidy, etc to deserving students from deprived sections of the society.</li>
+                <li>Encouraging international cooperation in the field of education, including working closely with the UNESCO and foreign governments as well as Universities, to enhance the educational opportunities in the country.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+          <div class="about-sidebar">
+            <h3>About MoE</h3>
+            <ul>
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#constitution">Constitutional Provision</a></li>
+              <li><a href="#allocation">Allocation of Business Rules</a></li>
+              <li><a href="#policy">Policy Initiatives</a></li>
+              <li><a href="#charter">Citizen's Charter</a></li>
+              <li><a href="#advisory">Advisory Bodies</a></li>
+              <li><a href="#organogram">Organogram</a></li>
+              <li><a href="#schemes">Schemes</a></li>
+              <li><a href="#who">Who's Who</a></li>
+              <li><a href="#tel1">Telephone Directory KB-2</a></li>
+              <li><a href="#tel2">Telephone Directory</a></li>
+              <li><a href="#services">Services for MoE Officials</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

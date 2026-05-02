@@ -500,27 +500,7 @@ min-width: 120px;
   border-radius: 5px;
 }
 
-@media (width < 768px) {
- .depWrap{
-   background-size: 80vh;
- }
- .sponWrap{
-  img{
-    width: 50%;
-  }
- }
- .sponsorGrid img{
-  width: calc(100% / 6);
- }
-    .updtSecWrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.card{
-  width: 100%;
-}
-}
+
 /* Main container */
 .institute-section {
   background-image: url(/img/inst_search.jpg);
@@ -629,6 +609,7 @@ min-width: 120px;
 .schemes-section {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   padding: 30px;
   background: #e9eaec;
@@ -756,3 +737,41 @@ min-width: 120px;
 }
 }
 
+
+
+@media (width < 768px) {
+ .depWrap{
+   background-size: 80vh;
+ }
+ .sponWrap{
+  img{
+    width: 50%;
+  }
+ }
+ .sponsorGrid img{
+  width: calc(100% / 6);
+ }
+    .updtSecWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card{
+  width: 100%;
+}
+.schemes-section{
+  display: block;
+
+}
+.schemes-left{
+  width: 98%;
+}
+.divider{
+  display: none;
+}
+.schemes-right{
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+}

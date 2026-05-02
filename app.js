@@ -13,6 +13,10 @@ app.get("/",(req,res) => {
   res.render("index.ejs");
 }
 )
+app.get("/about-moe",(req,res) => {
+  res.render("pages/about-moe.ejs");
+}
+)
 app.get("/NEP-2020",(req,res)=>{
     res.sendFile(path.join(__dirname,"public/pdf/PM Shri Schools Scheme Data.pdf"))
 })
